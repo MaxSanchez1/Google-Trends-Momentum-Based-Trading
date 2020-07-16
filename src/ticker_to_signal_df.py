@@ -1,0 +1,80 @@
+import datetime
+import pandas as pd
+import pandas_datareader as web
+from pytrends.request import TrendReq
+
+# method to create the dataframe of signals
+# - In: Ticker, Start date, End date
+# - Out: Df with index=date, most recent trend score,
+# rolling average volume (RAV), % change from prev RAV
+
+# signal (True if: trend over last by 2x, over RAV)
+
+# plan:
+# - most recent trend score: already done in sanity_check (with ffill)
+# - most recent trends score with no ffill so that pct_change works
+# - <'Trend_Change'>change from previous trend score: series.pct_change()
+# - rolling average volume --> df.rolling(window, min_periods)
+# - <'Pct_Over_Prev_Volume'>change from previous RAV --> series.pct_change()
+# - signal: apply(lambda row: ((row.Trend_Change > 200(%) and (row.volume > row.Pct_Over_Prev_Volume))
+
+# for testing
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+
+
+# maybe also take in time, default to all of 2019
+def tick_to_sig(company_name, ticker):
+    # change these from being hardcoded once testing is done
+    start = datetime.datetime(2020, 1, 1)
+    end = datetime.datetime(2020, 6, 20)
+
+    # getting the data from yahoo finance for the given time period
+    signal_df = web.DataReader(ticker, 'yahoo', start, end)
+    signal_df = signal_df.rename(columns={'Adj Close': 'AdjClose'})
+
+    # Calculate close price change day-to-day for back-testing
+    signal_df['ClosePriceChangePercent'] = signal_df.AdjClose.pct_change() * 100
+    signal_df = signal_df.drop(columns=['High', 'Low', 'Open', 'Close'])
+
+    # Calculate Rolling Average Volume (past business week of data (5 days))
+    signal_df['RAV'] = signal_df['Volume'].rolling(window=5).mean()
+
+    # Calculate current day's RAV change over previous days'
+    signal_df['RavChangePercent'] = signal_df.RAV.pct_change() * 100
+
+    # Building the trend signal from Google Trends
+    pytr = TrendReq(hl='en-US', tz=360)
+    name_plus_robinhood = str(company_name) + " robinhood"
+    kw_list = [name_plus_robinhood]
+    pytr.build_payload(kw_list, timeframe='2020-1-1 2020-06-20')  # change this from being hardcoded once testing done
+    # df containing weekly interest score for the given keyword
+    df = pytr.interest_over_time()
+    df = df.drop(columns=['isPartial'])
+
+    # merging together the two dfs by using their dates
+    signal_df = pd.merge(signal_df, df, how='outer', left_index=True, right_index=True)
+
+    # making a new column that fills in the weekday with the weekend's trend score so that there is a value
+    # for the signal to grab every day
+    signal_df[[name_plus_robinhood + "_filled"]] = signal_df[[name_plus_robinhood]].fillna(method='ffill')
+
+    # Calculate current Trend score's percent change over the previous one
+    signal_df['TrendChangePercent'] = signal_df[kw_list].pct_change(freq='W') * 100
+
+    # new column that forward fills trend change percent so that signal has a value every day
+    signal_df['TrendChangePercent_filled'] = signal_df['TrendChangePercent'].fillna(method='ffill')
+
+    # building the first attempt at a signal
+    signal_df['Bool_Signal'] = signal_df.apply(
+        lambda row: (row.TrendChangePercent_filled > 50) and (row.RavChangePercent > row.RAV), axis=1)
+
+
+    #print(df.head(20))
+    #print(signal_df[kw_list].head(20))
+    #return signal_df[['Bool_Signal', 'hertz robinhood', 'TrendChangePercent_filled', 'RavChangePercent', 'RAV']]
+    #return signal_df['Bool_Signal']
+
+    # first condition
+    return signal_df[['hertz robinhood', 'TrendChangePercent','TrendChangePercent_filled']]
+print(tick_to_sig("hertz","HTZ"))
