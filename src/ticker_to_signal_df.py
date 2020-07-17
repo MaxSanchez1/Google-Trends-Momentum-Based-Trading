@@ -21,13 +21,15 @@ from pytrends.request import TrendReq
 # for testing
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
+pd.set_option('use_inf_as_na', True)
 
 
 # maybe also take in time, default to all of 2019
 def tick_to_sig(company_name, ticker):
     # change these from being hardcoded once testing is done
+    # for some reason, any range under 270 days long gives daily values
     start = datetime.datetime(2020, 1, 1)
-    end = datetime.datetime(2020, 6, 20)
+    end = datetime.datetime(2020, 7, 15)
 
     # getting the data from yahoo finance for the given time period
     signal_df = web.DataReader(ticker, 'yahoo', start, end)
@@ -47,12 +49,12 @@ def tick_to_sig(company_name, ticker):
     pytr = TrendReq(hl='en-US', tz=360)
     name_plus_robinhood = str(company_name) + " robinhood"
     kw_list = [name_plus_robinhood]
-    pytr.build_payload(kw_list, timeframe='2020-1-1 2020-06-20')  # change this from being hardcoded once testing done
+    pytr.build_payload(kw_list, timeframe='2020-1-1 2020-07-15')  # change this from being hardcoded once testing done
     # df containing weekly interest score for the given keyword
     df = pytr.interest_over_time()
     df = df.drop(columns=['isPartial'])
 
-    # merging together the two dfs by using their dates
+    # merging together the two dfs by using their datestsla robinhood
     signal_df = pd.merge(signal_df, df, how='outer', left_index=True, right_index=True)
 
     # making a new column that fills in the weekday with the weekend's trend score so that there is a value
@@ -60,14 +62,16 @@ def tick_to_sig(company_name, ticker):
     signal_df[[name_plus_robinhood + "_filled"]] = signal_df[[name_plus_robinhood]].fillna(method='ffill')
 
     # Calculate current Trend score's percent change over the previous one
-    signal_df['TrendChangePercent'] = signal_df[kw_list].pct_change(freq='W') * 100
+    signal_df['TrendChangePercent'] = signal_df[kw_list].pct_change().fillna(0) * 100
 
     # new column that forward fills trend change percent so that signal has a value every day
-    signal_df['TrendChangePercent_filled'] = signal_df['TrendChangePercent'].fillna(method='ffill')
+    # this is not needed when the ranges are short enough to have trend score for every day
+    #signal_df['TrendChangePercent_filled'] = signal_df['TrendChangePercent'].fillna(method='ffill')
 
     # building the first attempt at a signal
+    # consider adding limits to the upper and lower end of the trend number
     signal_df['Bool_Signal'] = signal_df.apply(
-        lambda row: (row.TrendChangePercent_filled > 50) and (row.RavChangePercent > row.RAV), axis=1)
+        lambda row: ((row.TrendChangePercent > 50) and (row.RavChangePercent > 5)), axis=1)
 
 
     #print(df.head(20))
@@ -76,5 +80,6 @@ def tick_to_sig(company_name, ticker):
     #return signal_df['Bool_Signal']
 
     # first condition
-    return signal_df[['hertz robinhood', 'TrendChangePercent','TrendChangePercent_filled']]
-print(tick_to_sig("hertz","HTZ"))
+    # return signal_df.head(20)
+    return signal_df[['ford robinhood','TrendChangePercent', 'RavChangePercent', 'Bool_Signal']]
+print(tick_to_sig("ford","F"))
