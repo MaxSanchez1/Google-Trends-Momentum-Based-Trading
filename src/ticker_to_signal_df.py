@@ -37,7 +37,7 @@ def tick_to_sig(company_name, ticker):
 
     # Calculate close price change day-to-day for back-testing
     signal_df['ClosePriceChangePercent'] = signal_df.AdjClose.pct_change() * 100
-    signal_df = signal_df.drop(columns=['High', 'Low', 'Open', 'Close'])
+    signal_df = signal_df.drop(columns=['High', 'Low'])
 
     # Calculate Rolling Average Volume (past business week of data (5 days))
     signal_df['RAV'] = signal_df['Volume'].rolling(window=5).mean()
@@ -73,7 +73,8 @@ def tick_to_sig(company_name, ticker):
     signal_df['Bool_Signal'] = signal_df.apply(
         lambda row: ((row.TrendChangePercent > 50) and (row.RavChangePercent > 5)), axis=1)
 
-
+    # this returns only the rows where the signal is true
+    return signal_df
     #print(df.head(20))
     #print(signal_df[kw_list].head(20))
     #return signal_df[['Bool_Signal', 'hertz robinhood', 'TrendChangePercent_filled', 'RavChangePercent', 'RAV']]
@@ -81,5 +82,40 @@ def tick_to_sig(company_name, ticker):
 
     # first condition
     # return signal_df.head(20)
-    return signal_df[['ford robinhood','TrendChangePercent', 'RavChangePercent', 'Bool_Signal']]
-print(tick_to_sig("ford","F"))
+    #return signal_df[['hertz robinhood','TrendChangePercent', 'RavChangePercent', 'Bool_Signal']]
+#print(tick_to_sig("tesla","TSLA"))
+
+sample_dict = {
+    "HTZ": "hertz",
+    "F": "ford",
+    "AAPL": "apple"
+}
+
+
+# method that takes in df of signals and tells you how much you'd make if you bought
+# at the close of the day of the signal and sold and the close of the next day
+# TODO: don't allow signals from the same week to avoid volatility
+def calculate_earnings_pct(company_name, ticker):
+    signal_df = tick_to_sig(company_name, ticker)
+    signal_df_only_true = signal_df[signal_df.Bool_Signal]
+    # cumulative change in percent if the signal is followed
+    percent_sum = 0
+    for index, row in signal_df_only_true.iterrows():
+        # the dates with positive signal and the price at which we're buying
+        date = index
+        close_price = row['Close']
+        # getting the close price of the next day (+3 if it's a friday
+        next_close = signal_df.iloc[signal_df.index.get_loc(date)+1]['Close']
+        # if it's nan that's usually because it's the weekend the next day so +3
+        # to get to monday
+        if not pd.notna(next_close):
+            next_close = signal_df.iloc[signal_df.index.get_loc(date)+3]['Close']
+        percent_sum += float(((next_close - close_price) / close_price))
+        print(percent_sum)
+    return(percent_sum)
+
+calculate_earnings_pct("tesla","TSLA")
+
+
+
+
