@@ -29,7 +29,7 @@ def tick_to_sig(company_name, ticker):
     # change these from being hardcoded once testing is done
     # for some reason, any range under 270 days long gives daily values
     start = datetime.datetime(2020, 1, 1)
-    end = datetime.datetime(2020, 7, 15)
+    end = datetime.datetime(2020, 7, 20)
 
     # getting the data from yahoo finance for the given time period
     signal_df = web.DataReader(ticker, 'yahoo', start, end)
@@ -49,7 +49,7 @@ def tick_to_sig(company_name, ticker):
     pytr = TrendReq(hl='en-US', tz=360)
     name_plus_robinhood = str(company_name) + " robinhood"
     kw_list = [name_plus_robinhood]
-    pytr.build_payload(kw_list, timeframe='2020-1-1 2020-07-15')  # change this from being hardcoded once testing done
+    pytr.build_payload(kw_list, timeframe='2020-1-1 2020-07-20')  # change this from being hardcoded once testing done
     # df containing weekly interest score for the given keyword
     df = pytr.interest_over_time()
     # df = df.drop(columns=['isPartial'])
@@ -64,17 +64,28 @@ def tick_to_sig(company_name, ticker):
     # Calculate current Trend score's percent change over the previous one
     signal_df['TrendChangePercent'] = signal_df[kw_list].pct_change().fillna(0) * 100
 
+    # Calculate the raw gain in trend score from the previous day
+    signal_df['TrendChangeRAW'] = signal_df[name_plus_robinhood].diff()
+
     # new column that forward fills trend change percent so that signal has a value every day
     # this is not needed when the ranges are short enough to have trend score for every day
-    #signal_df['TrendChangePercent_filled'] = signal_df['TrendChangePercent'].fillna(method='ffill')
+    # signal_df['TrendChangePercent_filled'] = signal_df['TrendChangePercent'].fillna(method='ffill')
 
     # building the first attempt at a signal
     # consider adding limits to the upper and lower end of the trend number
+    # also need to add a column that is just net change from the previous day
+    # the reason for these ranges being capped is so that there's not TOO much attention on the stock which could
+    # lead to a large unpredictable spike and then a crash as people sell off
     signal_df['Bool_Signal'] = signal_df.apply(
-        lambda row: ((row.TrendChangePercent > 50) and (row.RavChangePercent > 5)), axis=1)
+        lambda row: (
+                (row.TrendChangeRAW > 25 and row.TrendChangeRAW < 75)
+                and
+                (row.RavChangePercent > 15 and row.RavChangePercent < 50)),
+        axis=1)
 
-    # this returns only the rows where the signal is true
     return signal_df
+    # this returns only the rows where the signal is true
+    #return signal_df[[name_plus_robinhood, 'TrendChangeRAW']]
     #print(df.head(20))
     #print(signal_df[kw_list].head(20))
     #return signal_df[['Bool_Signal', 'hertz robinhood', 'TrendChangePercent_filled', 'RavChangePercent', 'RAV']]
@@ -82,8 +93,9 @@ def tick_to_sig(company_name, ticker):
 
     # first condition
     # return signal_df.head(20)
-    #return signal_df[['hertz robinhood','TrendChangePercent', 'RavChangePercent', 'Bool_Signal']]
-# print(tick_to_sig("Genius Brands","GNUS"))
+    # return signal_df[['hertz robinhood','TrendChangePercent', 'RavChangePercent', 'Bool_Signal']]
+#print(tick_to_sig("Amazon","AMZN"))
+
 
 sample_dict = {
     "HTZ": "hertz",
@@ -98,7 +110,8 @@ sample_dict = {
 def calculate_earnings_pct(company_name, ticker):
     signal_df = tick_to_sig(company_name, ticker)
     signal_df_only_true = signal_df[signal_df.Bool_Signal]
-    # print(signal_df_only_true)
+    #print(signal_df_only_true)
+    #print(signal_df).tail(35)
     # cumulative change in percent if the signal is followed
     percent_sum = 0
     for index, row in signal_df_only_true.iterrows():
@@ -111,10 +124,13 @@ def calculate_earnings_pct(company_name, ticker):
         # to get to monday
         if not pd.notna(next_close):
             next_close = signal_df.iloc[signal_df.index.get_loc(date)+3]['Close']
+        # this accounts for 3-day weekends due to trading holidays
+        if not pd.notna(next_close):
+            next_close = signal_df.iloc[signal_df.index.get_loc(date)+4]['Close']
         percent_sum += float(((next_close - close_price) / close_price)) * 100
-        #print(percent_sum)
-        #print(close_price, next_close)
     return percent_sum
+
+#print(calculate_earnings_pct("Amazon", "AMZN"))
 
 
 # mostly stocks from "most popular under $15" from robinhood
@@ -129,37 +145,34 @@ cheap_stocks = {
     "Plug Power": "PLUG",
     "Fitbit": "FIT",
     "NIO": "NIO",
-    #"Cronos": "CRON",
     "Zynga": "ZNGA",
     "Aphria": "APHA",
     "Marathon": "MRO",
     "JetBlue": "JBLU",
-    "Genius": "GNUS",
     "MFA": "MFA",
     "Invesco": "IVR",
     "AMC": "AMC",
     "Nokia": "NOK",
-    #"New Residential": "NRZ",
     "Catalyst": "CPRX",
     "Dave and busters": "PLAY",
-    #"Callon": "CPE",
     "Sirius": "SIRI",
-    #"Tilray": "TLRY",
     "iBio": "IBIO",
-    #"Halliburton": "HAL",
-    #"Kosmos": "KOS",
     "Gap": "GPS",
-    #"TherapeuticsMD": "TXMD",
-    ## "FuelCell": "FCEL",
     "Sorrento": "SRNE",
-    # "Energy Transfer": "ET",
-    # "NYMT": "NYMT",
-    # : "CRBP",
     "macys": "M",
     "Everi": "EVRI",
     "Viking": "VKTX",
     # "": "",
     "Hertz": "HTZ",
+    "Genius": "GNUS",
+    "Apple": "AAPL",
+    "Tesla": "TSLA",
+    "Microsoft": "MSFT",
+    "Disney": "DIS",
+    "Amazon": "AMZN",
+    "Snapchat": "SNAP",
+    "Uber": "UBER",
+    "Facebook": "FB",
 }
 
 
@@ -167,18 +180,16 @@ cheap_stocks = {
 # their corresponding ticker. Outputs the percentage returns as determined by
 # the signal generated by the chosen method
 def stock_to_result(dict_of_stocks):
-    # list of rows (dicts) that will be added to df later
-    rows_list = []
-    # keys are the company names, values are the tickers
-    for key in dict_of_stocks.keys():
-        # this is for debugging
-        print(key)
-        dict_temp = {key: calculate_earnings_pct(key, dict_of_stocks[key])}
-        rows_list.append(dict_temp)
-    return_df = pd.DataFrame(rows_list)
+    # make a dataframe with the index being the names of the companies
+    return_df = pd.DataFrame({'Company': list(dict_of_stocks.keys())})
+    return_df['Signal Return'] = return_df.apply(
+        lambda row: calculate_earnings_pct(row.Company, dict_of_stocks[row.Company]), axis=1)
     return return_df
 
 
-print(stock_to_result(cheap_stocks))
+result = stock_to_result(cheap_stocks)
+print(result)
+print("here is the average return on your money")
+print(result['Signal Return'].mean())
 
 
