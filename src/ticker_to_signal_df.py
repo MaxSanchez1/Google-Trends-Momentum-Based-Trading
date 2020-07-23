@@ -76,9 +76,10 @@ def tick_to_sig(company_name, ticker):
     # also need to add a column that is just net change from the previous day
     # the reason for these ranges being capped is so that there's not TOO much attention on the stock which could
     # lead to a large unpredictable spike and then a crash as people sell off
+    # Basically TRUE if large interest jump + volume jump
     signal_df['Bool_Signal'] = signal_df.apply(
         lambda row: (
-                (row.TrendChangeRAW > 25 and row.TrendChangeRAW < 75)
+                (row.TrendChangeRAW > 25 and row.TrendChangeRAW < 65)
                 and
                 (row.RavChangePercent > 15 and row.RavChangePercent < 50)),
         axis=1)
@@ -94,7 +95,14 @@ def tick_to_sig(company_name, ticker):
     # first condition
     # return signal_df.head(20)
     # return signal_df[['hertz robinhood','TrendChangePercent', 'RavChangePercent', 'Bool_Signal']]
-#print(tick_to_sig("Amazon","AMZN"))
+#print(tick_to_sig("genius","GNUS"))
+
+
+# finding the specific ranges of positive signal examples to look at
+start_date = datetime.datetime(2020, 6, 1)
+end_date = datetime.datetime(2020, 6, 11)
+df = tick_to_sig("hertz", "HTZ")
+print(df[start_date:end_date])
 
 
 sample_dict = {
@@ -106,31 +114,48 @@ sample_dict = {
 
 # method that takes in df of signals and tells you how much you'd make if you bought
 # at the close of the day of the signal and sold and the close of the next day
-# TODO: don't allow signals from the same week to avoid volatility
 def calculate_earnings_pct(company_name, ticker):
     signal_df = tick_to_sig(company_name, ticker)
     signal_df_only_true = signal_df[signal_df.Bool_Signal]
-    #print(signal_df_only_true)
-    #print(signal_df).tail(35)
+    # print(signal_df_only_true)
     # cumulative change in percent if the signal is followed
     percent_sum = 0
     for index, row in signal_df_only_true.iterrows():
-        # the dates with positive signal and the price at which we're buying
+        # new method -----
+        # - buy at open of next trading day
+        # - sell at the closing of the day after that
         date = index
-        close_price = row['Close']
-        # getting the close price of the next day (+3 if it's a friday
-        next_close = signal_df.iloc[signal_df.index.get_loc(date)+1]['Close']
-        # if it's nan that's usually because it's the weekend the next day so +3
-        # to get to monday
-        if not pd.notna(next_close):
-            next_close = signal_df.iloc[signal_df.index.get_loc(date)+3]['Close']
-        # this accounts for 3-day weekends due to trading holidays
-        if not pd.notna(next_close):
-            next_close = signal_df.iloc[signal_df.index.get_loc(date)+4]['Close']
-        percent_sum += float(((next_close - close_price) / close_price)) * 100
+
+        # need to get the open of the next trading day and make sure it's not null
+        next_open = signal_df.iloc[signal_df.index.get_loc(date)+1]['Open']
+        # if it's null it's usually because signal was on a friday and this is a weekend day. This fixes that
+        if not pd.notna(next_open):
+            next_open = signal_df.iloc[signal_df.index.get_loc(date)+3]['Open']
+        # there are some 3-day weekends for the trading floor, this covers that edge case
+        if not pd.notna(next_open):
+            next_open = signal_df.iloc[signal_df.index.get_loc(date)+4]['Open']
+
+        # need to get the close price of the day after (eg. flag on monday (night), buy at tues open, sell at wed close)
+        close_two_after_flag = signal_df.iloc[signal_df.index.get_loc(date)+2]['Close']
+        # if this runs into a weekend by 1 day (eg. tries to grab a sunday)
+        if not pd.notna(close_two_after_flag):
+            close_two_after_flag = signal_df.iloc[signal_df.index.get_loc(date)+3]['Close']
+        # if this runs into a weekend by 2 days (eg. tries to grab a saturday)
+        if not pd.notna(close_two_after_flag):
+            close_two_after_flag = signal_df.iloc[signal_df.index.get_loc(date)+4]['Close']
+        # if this runs into a weekend by 3 days (eg. tries to grab the closed friday of a trading holiday)
+        if not pd.notna(close_two_after_flag):
+            close_two_after_flag = signal_df.iloc[signal_df.index.get_loc(date)+5]['Close']
+
+        # now calculating returns using the found values that shouldn't be able to be nans
+        # print("Bought at:")
+        # print(next_open)
+        # print("Sold at:")
+        # print(close_two_after_flag)
+        percent_sum += float((close_two_after_flag - next_open) / next_open) * 100
     return percent_sum
 
-#print(calculate_earnings_pct("Amazon", "AMZN"))
+# print(calculate_earnings_pct("hertz", "HTZ"))
 
 
 # mostly stocks from "most popular under $15" from robinhood
@@ -187,9 +212,14 @@ def stock_to_result(dict_of_stocks):
     return return_df
 
 
-result = stock_to_result(cheap_stocks)
-print(result)
-print("here is the average return on your money")
-print(result['Signal Return'].mean())
+# result = stock_to_result(cheap_stocks)
+# print(result)
+# print("here is the average return on your money")
+# print(result['Signal Return'].mean())
+
+
+# targeting specific kind of trend we're looking for more accurately
+# GNUS example
+# 2020-06-01: Trend: 35 after 0's for awhile, then another day of 35. Then 100.
 
 
