@@ -29,7 +29,7 @@ def tick_to_sig(company_name, ticker):
     # change these from being hardcoded once testing is done
     # for some reason, any range under 270 days long gives daily values
     start = datetime.datetime(2020, 1, 1)
-    end = datetime.datetime(2020, 7, 20)
+    end = datetime.datetime(2020, 7, 15)
 
     # getting the data from yahoo finance for the given time period
     signal_df = web.DataReader(ticker, 'yahoo', start, end)
@@ -40,16 +40,16 @@ def tick_to_sig(company_name, ticker):
     signal_df = signal_df.drop(columns=['High', 'Low'])
 
     # Calculate Rolling Average Volume (past business week of data (5 days))
-    signal_df['RAV'] = signal_df['Volume'].rolling(window=5).mean()
+    #signal_df['RAV'] = signal_df['Volume'].rolling(window=5).mean()
 
     # Calculate current day's RAV change over previous days'
-    signal_df['RavChangePercent'] = signal_df.RAV.pct_change() * 100
+    signal_df['VolumeChangePercent'] = signal_df.Volume.pct_change() * 100
 
     # Building the trend signal from Google Trends
-    pytr = TrendReq(hl='en-US', tz=360)
+    pytr = TrendReq(hl='en-US', tz=360, geo='US')
     name_plus_robinhood = str(company_name) + " robinhood"
     kw_list = [name_plus_robinhood]
-    pytr.build_payload(kw_list, timeframe='2020-1-1 2020-07-20')  # change this from being hardcoded once testing done
+    pytr.build_payload(kw_list, timeframe='2020-1-1 2020-07-15')  # change this from being hardcoded once testing done
     # df containing weekly interest score for the given keyword
     df = pytr.interest_over_time()
     # df = df.drop(columns=['isPartial'])
@@ -79,12 +79,14 @@ def tick_to_sig(company_name, ticker):
     # Basically TRUE if large interest jump + volume jump
     signal_df['Bool_Signal'] = signal_df.apply(
         lambda row: (
-                (row.TrendChangeRAW > 25 and row.TrendChangeRAW < 65)
+                # we want an increase in attention but not too much
+                (row.TrendChangeRAW >= 15 and row.TrendChangeRAW <= 55)
                 and
-                (row.RavChangePercent > 15 and row.RavChangePercent < 50)),
+                # we want a large in volume but also not too much
+                (row.VolumeChangePercent > 250 and row.VolumeChangePercent < 600)),
         axis=1)
 
-    return signal_df
+    return signal_df # [['Volume', 'VolumeChangePercent']]
     # this returns only the rows where the signal is true
     #return signal_df[[name_plus_robinhood, 'TrendChangeRAW']]
     #print(df.head(20))
@@ -95,14 +97,15 @@ def tick_to_sig(company_name, ticker):
     # first condition
     # return signal_df.head(20)
     # return signal_df[['hertz robinhood','TrendChangePercent', 'RavChangePercent', 'Bool_Signal']]
-#print(tick_to_sig("genius","GNUS"))
+# print(tick_to_sig("genius","GNUS"))
 
 
 # finding the specific ranges of positive signal examples to look at
-start_date = datetime.datetime(2020, 6, 1)
-end_date = datetime.datetime(2020, 6, 11)
-df = tick_to_sig("hertz", "HTZ")
-print(df[start_date:end_date])
+# start_date = datetime.datetime(2020, 5, 25)
+# end_date = datetime.datetime(2020, 6, 11)
+# df = tick_to_sig("genius", "GNUS")
+# df = tick_to_sig("hertz", "HTZ")
+# print(df[start_date:end_date])
 
 
 sample_dict = {
@@ -116,6 +119,7 @@ sample_dict = {
 # at the close of the day of the signal and sold and the close of the next day
 def calculate_earnings_pct(company_name, ticker):
     signal_df = tick_to_sig(company_name, ticker)
+    #print(signal_df)
     signal_df_only_true = signal_df[signal_df.Bool_Signal]
     # print(signal_df_only_true)
     # cumulative change in percent if the signal is followed
@@ -155,49 +159,45 @@ def calculate_earnings_pct(company_name, ticker):
         percent_sum += float((close_two_after_flag - next_open) / next_open) * 100
     return percent_sum
 
-# print(calculate_earnings_pct("hertz", "HTZ"))
+#print(calculate_earnings_pct("hertz", "HTZ"))
 
 
 # mostly stocks from "most popular under $15" from robinhood
 # tried to use what the easiest way to search a stock would be
 # eg. Cronos instead of "Cronos Financial"
 cheap_stocks = {
-    "Ford": "F",
+    "ford": "F",
     "GE": "GE",
     "American Airlines": "AAL",
     "gopro": "GPRO",
-    "Aurora": "ACB",
-    "Plug Power": "PLUG",
-    "Fitbit": "FIT",
+    "aurora": "ACB",
+    "plug power": "PLUG",
     "NIO": "NIO",
-    "Zynga": "ZNGA",
+    "zynga": "ZNGA",
     "Aphria": "APHA",
     "Marathon": "MRO",
-    "JetBlue": "JBLU",
     "MFA": "MFA",
     "Invesco": "IVR",
     "AMC": "AMC",
-    "Nokia": "NOK",
+    "nokia": "NOK",
     "Catalyst": "CPRX",
     "Dave and busters": "PLAY",
-    "Sirius": "SIRI",
     "iBio": "IBIO",
     "Gap": "GPS",
     "Sorrento": "SRNE",
     "macys": "M",
     "Everi": "EVRI",
-    "Viking": "VKTX",
     # "": "",
-    "Hertz": "HTZ",
-    "Genius": "GNUS",
-    "Apple": "AAPL",
-    "Tesla": "TSLA",
-    "Microsoft": "MSFT",
-    "Disney": "DIS",
-    "Amazon": "AMZN",
-    "Snapchat": "SNAP",
-    "Uber": "UBER",
-    "Facebook": "FB",
+    "hertz": "HTZ",
+    "genius": "GNUS",
+    "apple": "AAPL",
+    "tesla": "TSLA",
+    "microsoft": "MSFT",
+    "disney": "DIS",
+    "amazon": "AMZN",
+    "snapchat": "SNAP",
+    "uber": "UBER",
+    "facebook": "FB",
 }
 
 
@@ -211,15 +211,13 @@ def stock_to_result(dict_of_stocks):
         lambda row: calculate_earnings_pct(row.Company, dict_of_stocks[row.Company]), axis=1)
     return return_df
 
+result = stock_to_result(cheap_stocks)
+print(result)
+print("here is the average return on your money")
+print(result['Signal Return'].mean())
 
-# result = stock_to_result(cheap_stocks)
-# print(result)
-# print("here is the average return on your money")
-# print(result['Signal Return'].mean())
 
-
-# targeting specific kind of trend we're looking for more accurately
-# GNUS example
-# 2020-06-01: Trend: 35 after 0's for awhile, then another day of 35. Then 100.
-
+# look into testing if the signal works better if there is at least 1 or 2 or a couple 0's in
+# the last 10 days of trading. These are stocks that we want to come "out of nowhere", not
+# ones that are on the top of people's minds
 
