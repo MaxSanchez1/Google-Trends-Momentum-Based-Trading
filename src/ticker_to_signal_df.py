@@ -29,14 +29,14 @@ def tick_to_sig(company_name, ticker):
     # change these from being hardcoded once testing is done
     # for some reason, any range under 270 days long gives daily values
     start = datetime.datetime(2020, 1, 1)
-    end = datetime.datetime(2020, 7, 15)
+    end = datetime.datetime(2020, 7, 20)
 
     # getting the data from yahoo finance for the given time period
     signal_df = web.DataReader(ticker, 'yahoo', start, end)
-    signal_df = signal_df.rename(columns={'Adj Close': 'AdjClose'})
+    # signal_df = signal_df.rename(columns={'Adj Close': 'AdjClose'})
 
     # Calculate close price change day-to-day for back-testing
-    signal_df['ClosePriceChangePercent'] = signal_df.AdjClose.pct_change() * 100
+    # signal_df['ClosePriceChangePercent'] = signal_df.AdjClose.pct_change() * 100
     signal_df = signal_df.drop(columns=['High', 'Low'])
 
     # Calculate Rolling Average Volume (past business week of data (5 days))
@@ -47,64 +47,62 @@ def tick_to_sig(company_name, ticker):
 
     # Building the trend signal from Google Trends
     pytr = TrendReq(hl='en-US', tz=360, geo='US')
-    name_plus_robinhood = str(company_name) + " robinhood"
+    name_plus_robinhood = str(company_name) + " stock"
     kw_list = [name_plus_robinhood]
-    pytr.build_payload(kw_list, timeframe='2020-1-1 2020-07-15')  # change this from being hardcoded once testing done
+    pytr.build_payload(kw_list, timeframe='2020-1-1 2020-07-20')  # change this from being hardcoded once testing done
     # df containing weekly interest score for the given keyword
     df = pytr.interest_over_time()
     # df = df.drop(columns=['isPartial'])
 
-    # merging together the two dfs by using their datestsla robinhood
+    # merging together the two dfs by using their dates
     signal_df = pd.merge(signal_df, df, how='outer', left_index=True, right_index=True)
 
     # making a new column that fills in the weekday with the weekend's trend score so that there is a value
     # for the signal to grab every day
-    signal_df[[name_plus_robinhood + "_filled"]] = signal_df[[name_plus_robinhood]].fillna(method='ffill')
+    # signal_df[[name_plus_robinhood + "_filled"]] = signal_df[[name_plus_robinhood]].fillna(method='ffill')
 
     # Calculate current Trend score's percent change over the previous one
-    signal_df['TrendChangePercent'] = signal_df[kw_list].pct_change().fillna(0) * 100
+    # signal_df['TrendChangePercent'] = signal_df[kw_list].pct_change().fillna(0) * 100
 
     # Calculate the raw gain in trend score from the previous day
     signal_df['TrendChangeRAW'] = signal_df[name_plus_robinhood].diff()
 
-    # new column that forward fills trend change percent so that signal has a value every day
-    # this is not needed when the ranges are short enough to have trend score for every day
-    # signal_df['TrendChangePercent_filled'] = signal_df['TrendChangePercent'].fillna(method='ffill')
+    # calculate the local maximum within the given period
+    signal_df['LocalMax'] = signal_df[name_plus_robinhood].cummax()
 
-    # building the first attempt at a signal
-    # consider adding limits to the upper and lower end of the trend number
-    # also need to add a column that is just net change from the previous day
-    # the reason for these ranges being capped is so that there's not TOO much attention on the stock which could
-    # lead to a large unpredictable spike and then a crash as people sell off
-    # Basically TRUE if large interest jump + volume jump
+    # calculate the difference in cumulative maximum day to day to find outlier days where the local max went up a lot
+    signal_df['LocalMaxChange'] = signal_df['LocalMax'].diff()
+
+    # second attempt at a signal
+    # looking for a day where the cumulative maximum has changed by some number
     signal_df['Bool_Signal'] = signal_df.apply(
-        lambda row: (
-                # we want an increase in attention but not too much
-                (row.TrendChangeRAW >= 15 and row.TrendChangeRAW <= 55)
-                and
-                # we want a large in volume but also not too much
-                (row.VolumeChangePercent > 250 and row.VolumeChangePercent < 600)),
-        axis=1)
+        # will include the hertz pop but also the genius crash so we can't include it
+        lambda row: (row.LocalMax > 20 and row.LocalMax < 55)
+                    and
+                    # this is so we don't use the entire period until the next peak, just one day
+                    (row.LocalMaxChange > 0)
+        , axis=1)
 
-    return signal_df # [['Volume', 'VolumeChangePercent']]
-    # this returns only the rows where the signal is true
-    #return signal_df[[name_plus_robinhood, 'TrendChangeRAW']]
-    #print(df.head(20))
-    #print(signal_df[kw_list].head(20))
-    #return signal_df[['Bool_Signal', 'hertz robinhood', 'TrendChangePercent_filled', 'RavChangePercent', 'RAV']]
-    #return signal_df['Bool_Signal']
+    # return signal_df  # [['Volume', 'VolumeChangePercent']]
+    return signal_df  # [[name_plus_robinhood, 'TrendChangeRAW']]
+    # print(df.head(20))
+    # print(signal_df[kw_list].head(20))
+    # return signal_df[['Bool_Signal', 'hertz robinhood', 'TrendChangePercent_filled', 'RavChangePercent', 'RAV']]
+    # return signal_df['Bool_Signal']
 
     # first condition
     # return signal_df.head(20)
     # return signal_df[['hertz robinhood','TrendChangePercent', 'RavChangePercent', 'Bool_Signal']]
+# print(tick_to_sig("hertz","HTZ"))
+
 # print(tick_to_sig("genius","GNUS"))
 
 
 # finding the specific ranges of positive signal examples to look at
-# start_date = datetime.datetime(2020, 5, 25)
+# start_date = datetime.datetime(2020, 5, 20)
 # end_date = datetime.datetime(2020, 6, 11)
-# df = tick_to_sig("genius", "GNUS")
-# df = tick_to_sig("hertz", "HTZ")
+# # df = tick_to_sig("genius", "GNUS")
+# # df = tick_to_sig("hertz", "HTZ")
 # print(df[start_date:end_date])
 
 
@@ -159,6 +157,7 @@ def calculate_earnings_pct(company_name, ticker):
         percent_sum += float((close_two_after_flag - next_open) / next_open) * 100
     return percent_sum
 
+#print(calculate_earnings_pct("genius", "GNUS"))
 #print(calculate_earnings_pct("hertz", "HTZ"))
 
 
@@ -177,16 +176,13 @@ cheap_stocks = {
     "Aphria": "APHA",
     "Marathon": "MRO",
     "MFA": "MFA",
-    "Invesco": "IVR",
     "AMC": "AMC",
     "nokia": "NOK",
     "Catalyst": "CPRX",
     "Dave and busters": "PLAY",
-    "iBio": "IBIO",
     "Gap": "GPS",
     "Sorrento": "SRNE",
     "macys": "M",
-    "Everi": "EVRI",
     # "": "",
     "hertz": "HTZ",
     "genius": "GNUS",
@@ -216,8 +212,4 @@ print(result)
 print("here is the average return on your money")
 print(result['Signal Return'].mean())
 
-
-# look into testing if the signal works better if there is at least 1 or 2 or a couple 0's in
-# the last 10 days of trading. These are stocks that we want to come "out of nowhere", not
-# ones that are on the top of people's minds
 
