@@ -2,6 +2,8 @@ import datetime
 import pandas as pd
 import pandas_datareader as web
 from pytrends.request import TrendReq
+from datetime import timedelta
+from dateutil.relativedelta import *
 
 # method to create the dataframe of signals
 # - In: Ticker, Start date, End date
@@ -23,14 +25,13 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 pd.set_option('use_inf_as_na', True)
 
+start_master = datetime.datetime(2020, 1, 1)
+end_master = datetime.datetime(2020, 7, 20)
+# this is how to get only the date for filling in "timeframe" in pytr
+# print(start_master.strftime('%Y-%m-%d'))
 
 # maybe also take in time, default to all of 2019
-def tick_to_sig(company_name, ticker):
-    # change these from being hardcoded once testing is done
-    # for some reason, any range under 270 days long gives daily values
-    start = datetime.datetime(2020, 1, 1)
-    end = datetime.datetime(2020, 7, 20)
-
+def tick_to_sig(company_name, ticker, start, end):
     # getting the data from yahoo finance for the given time period
     signal_df = web.DataReader(ticker, 'yahoo', start, end)
     # signal_df = signal_df.rename(columns={'Adj Close': 'AdjClose'})
@@ -49,7 +50,8 @@ def tick_to_sig(company_name, ticker):
     pytr = TrendReq(hl='en-US', tz=360, geo='US')
     name_plus_robinhood = str(company_name) + " stock"
     kw_list = [name_plus_robinhood]
-    pytr.build_payload(kw_list, timeframe='2020-1-1 2020-07-20')  # change this from being hardcoded once testing done
+    tf = start.strftime('%Y-%m-%d') + " " + end.strftime('%Y-%m-%d')
+    pytr.build_payload(kw_list, timeframe=tf)  # change this from being hardcoded once testing done
     # df containing weekly interest score for the given keyword
     df = pytr.interest_over_time()
     # df = df.drop(columns=['isPartial'])
@@ -80,6 +82,7 @@ def tick_to_sig(company_name, ticker):
         lambda row: (row.LocalMax > 20 and row.LocalMax < 55)
                     and
                     # this is so we don't use the entire period until the next peak, just one day
+                    # this strategy is much more volatile without this but it could be more profitable
                     (row.LocalMaxChange > 0)
         , axis=1)
 
@@ -93,8 +96,7 @@ def tick_to_sig(company_name, ticker):
     # first condition
     # return signal_df.head(20)
     # return signal_df[['hertz robinhood','TrendChangePercent', 'RavChangePercent', 'Bool_Signal']]
-# print(tick_to_sig("hertz","HTZ"))
-
+#print(tick_to_sig("hertz","HTZ", start_master, end_master))
 # print(tick_to_sig("genius","GNUS"))
 
 
@@ -207,9 +209,33 @@ def stock_to_result(dict_of_stocks):
         lambda row: calculate_earnings_pct(row.Company, dict_of_stocks[row.Company]), axis=1)
     return return_df
 
-result = stock_to_result(cheap_stocks)
-print(result)
-print("here is the average return on your money")
-print(result['Signal Return'].mean())
+# result = stock_to_result(cheap_stocks)
+# print(result)
+# print("here is the average return on your money")
+# print(result['Signal Return'].mean())
+
+
+# forward-looking signal alert
+# - find today's date and subtract 6 months from it. That's the start and today is the end.
+# - plug that start and end into tick_to_sig
+# - if the bottom row (current day) is a True, this method will return true
+
+# TODO: current issue is that historical is 36 hours old so I'm going to have to make the best prediction
+# TODO:     I can with data that is a couple days old. Maybe now I'll try and do the more volatile strategy
+# TODO:     that waits for a second peak and buys all of the way through. This doesn't need as up-to-date data
+def forward_looking_signal(company_name, ticker):
+    # today
+    end_local = datetime.datetime.now()
+    # 7 months before today
+    start_local = end_local + relativedelta(months=-7)
+    # running the signal generation
+    signal_dataframe = tick_to_sig(company_name, ticker, start_local, end_local)
+    print(signal_dataframe)
+
+
+print(forward_looking_signal("hertz", "HTZ"))
+
+
+
 
 
