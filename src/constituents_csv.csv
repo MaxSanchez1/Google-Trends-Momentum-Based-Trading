@@ -1,0 +1,505 @@
+3m,MMM,3M Company
+ao smith,AOS,A.O. Smith Corp
+abbott,ABT,Abbott Laboratories
+abbvie,ABBV,AbbVie Inc.
+abiomed,ABMD,ABIOMED Inc
+accenture,ACN,Accenture plc
+blizzard,ATVI,Activision Blizzard
+adobe,ADBE,Adobe Inc.
+advanced auto,AAP,Advance Auto Parts
+AMD,AMD,Advanced Micro Devices Inc
+AES,AES,AES Corp
+aflac,AFL,AFLAC Inc
+agilient,A,Agilent Technologies Inc
+air products ,APD,Air Products & Chemicals Inc
+akamai,AKAM,Akamai Technologies Inc
+alaska air,ALK,Alaska Air Group Inc
+albemarle,ALB,Albemarle Corp
+alexandria,ARE,Alexandria Real Estate Equities
+alexion,ALXN,Alexion Pharmaceuticals
+align,ALGN,Align Technology
+allegion,ALLE,Allegion
+alliant,LNT,Alliant Energy Corp
+allstate,ALL,Allstate Corp
+google ,GOOGL,Alphabet Inc. (Class A)
+google ,GOOG,Alphabet Inc. (Class C)
+altria,MO,Altria Group Inc
+amazon,AMZN,Amazon.com Inc.
+amcor,AMCR,Amcor plc
+ameren,AEE,Ameren Corp
+americal airlines,AAL,American Airlines Group
+americal electric,AEP,American Electric Power
+american express,AXP,American Express Co
+american international,AIG,American International Group
+american tower,AMT,American Tower Corp.
+american water works,AWK,American Water Works Company Inc
+ameriprise financial,AMP,Ameriprise Financial
+amerisource,ABC,AmerisourceBergen Corp
+ametek,AME,AMETEK Inc.
+amgen,AMGN,Amgen Inc.
+amphenol,APH,Amphenol Corp
+analog devices,ADI,Analog Devices Inc.
+ansys,ANSS,ANSYS
+anthem,ANTM,Anthem
+aon,AON,Aon plc
+apache,APA,Apache Corporation
+apartment investment,AIV,Apartment Investment & Management
+apple,AAPL,Apple Inc.
+applied materials,AMAT,Applied Materials Inc.
+aptiv,APTV,Aptiv PLC
+archer,ADM,Archer-Daniels-Midland Co
+arista,ANET,Arista Networks
+AJG,AJG,Arthur J. Gallagher & Co.
+assurant,AIZ,Assurant
+at&t,T,AT&T Inc.
+atmos,ATO,Atmos Energy
+autodesk,ADSK,Autodesk Inc.
+ADP ,ADP,Automatic Data Processing
+autozone,AZO,AutoZone Inc
+avalon bay,AVB,AvalonBay Communities
+avery dennison,AVY,Avery Dennison Corp
+baker hughes,BKR,Baker Hughes Co
+ball ,BLL,Ball Corp
+bank of america,BAC,Bank of America Corp
+baxter,BAX,Baxter International Inc.
+becton,BDX,Becton Dickinson
+berkshire hathaway,BRK.B,Berkshire Hathaway
+best buy,BBY,Best Buy Co. Inc.
+bio rad,BIO,Bio-Rad Laboratories
+bio gen,BIIB,Biogen Inc.
+blackrock,BLK,BlackRock
+boeing,BA,Boeing Company
+booking,BKNG,Booking Holdings Inc
+borg warner,BWA,BorgWarner
+boston properties,BXP,Boston Properties
+boston scientific,BSX,Boston Scientific
+bristol myers,BMY,Bristol-Myers Squibb
+broadcom,AVGO,Broadcom Inc.
+broadridge,BR,Broadridge Financial Solutions
+brown-forman,BF.B,Brown-Forman Corp.
+ch robinson,CHRW,C. H. Robinson Worldwide
+cabot,COG,Cabot Oil & Gas
+cadence,CDNS,Cadence Design Systems
+campbell,CPB,Campbell Soup
+capital one,COF,Capital One Financial
+cardinal,CAH,Cardinal Health Inc.
+carmax,KMX,Carmax Inc
+carnival,CCL,Carnival Corp.
+carrier,CARR,Carrier Global
+caterpillar,CAT,Caterpillar Inc.
+cboe,CBOE,Cboe Global Markets
+cbre,CBRE,CBRE Group
+cdw,CDW,CDW
+celanese,CE,Celanese
+centene,CNC,Centene Corporation
+centerpoint,CNP,CenterPoint Energy
+century link,CTL,CenturyLink Inc
+cerner,CERN,Cerner
+cf industries,CF,CF Industries Holdings Inc
+schwab,SCHW,Charles Schwab Corporation
+charter,CHTR,Charter Communications
+chevron,CVX,Chevron Corp.
+chipotle,CMG,Chipotle Mexican Grill
+chubb,CB,Chubb Limited
+church and dwight,CHD,Church & Dwight
+cigna,CI,CIGNA Corp.
+cincinnati,CINF,Cincinnati Financial
+cintas,CTAS,Cintas Corporation
+cisco,CSCO,Cisco Systems
+citigroup,C,Citigroup Inc.
+citizens financial,CFG,Citizens Financial Group
+citrix,CTXS,Citrix Systems
+cme,CME,CME Group Inc.
+cms,CMS,CMS Energy
+coca cola,KO,Coca-Cola Company
+cognizant,CTSH,Cognizant Technology Solutions
+colgate,CL,Colgate-Palmolive
+comcast,CMCSA,Comcast Corp.
+comerica,CMA,Comerica Inc.
+conagra,CAG,Conagra Brands
+concho,CXO,Concho Resources
+phillips,COP,ConocoPhillips
+edison,ED,Consolidated Edison
+constellation,STZ,Constellation Brands
+copart,CPRT,Copart Inc
+corning,GLW,Corning Inc.
+corteva,CTVA,Corteva
+costco,COST,Costco Wholesale Corp.
+coty,COTY,Coty Inc
+crown castle,CCI,Crown Castle International Corp.
+csx,CSX,CSX Corp.
+cummins,CMI,Cummins Inc.
+cvs,CVS,CVS Health
+d r horton,DHI,D. R. Horton
+danaher,DHR,Danaher Corp.
+darden,DRI,Darden Restaurants
+davita,DVA,DaVita Inc.
+deere,DE,Deere & Co.
+delta,DAL,Delta Air Lines Inc.
+sirona,XRAY,Dentsply Sirona
+devon,DVN,Devon Energy
+dexcom,DXCM,DexCom
+diamondback,FANG,Diamondback Energy
+realty trust,DLR,Digital Realty Trust Inc
+discover,DFS,Discover Financial Services
+discovery,DISCA,Discovery Inc. (Class A)
+discovery,DISCK,Discovery Inc. (Class C)
+dish,DISH,Dish Network
+dollar general,DG,Dollar General
+dollar tree,DLTR,Dollar Tree
+dominion,D,Dominion Energy
+dominos,DPZ,Domino's Pizza
+dover,DOV,Dover Corporation
+dow,DOW,Dow Inc.
+dte,DTE,DTE Energy Co.
+duke,DUK,Duke Energy
+duke,DRE,Duke Realty Corp
+dupont,DD,DuPont de Nemours Inc
+dxc,DXC,DXC Technology
+etrade,ETFC,E*Trade
+eastman,EMN,Eastman Chemical
+eaton,ETN,Eaton Corporation
+ebay,EBAY,eBay Inc.
+ecolab,ECL,Ecolab Inc.
+edison,EIX,Edison Int'l
+edwards,EW,Edwards Lifesciences
+ea,EA,Electronic Arts
+emerson,EMR,Emerson Electric Company
+entergy,ETR,Entergy Corp.
+eog,EOG,EOG Resources
+equifax,EFX,Equifax Inc.
+equinix,EQIX,Equinix
+equity,EQR,Equity Residential
+essex,ESS,Essex Property Trust Inc.
+estee lauder,EL,Estée Lauder Companies
+everest,RE,Everest Re Group Ltd.
+evergy,EVRG,Evergy
+eversource,ES,Eversource Energy
+exelon,EXC,Exelon Corp.
+expedia,EXPE,Expedia Group
+expeditors,EXPD,Expeditors
+extra space,EXR,Extra Space Storage
+exxon,XOM,Exxon Mobil Corp.
+f5,FFIV,F5 Networks
+facebook,FB,Facebook Inc.
+fastenal,FAST,Fastenal Co
+frt,FRT,Federal Realty Investment Trust
+fedex,FDX,FedEx Corporation
+fidelity,FIS,Fidelity National Information Services
+fifth third,FITB,Fifth Third Bancorp
+first republic,FRC,First Republic Bank
+first energy,FE,FirstEnergy Corp
+fiserv,FISV,Fiserv Inc
+fleetcor,FLT,FleetCor Technologies Inc
+flir,FLIR,FLIR Systems
+flowserve,FLS,Flowserve Corporation
+fmc,FMC,FMC Corporation
+ford,F,Ford Motor Company
+fortinet,FTNT,Fortinet
+fortive,FTV,Fortive Corp
+fortune brands,FBHS,Fortune Brands Home & Security
+fox,FOXA,Fox Corporation (Class A)
+fox,FOX,Fox Corporation (Class B)
+franklin,BEN,Franklin Resources
+freeport,FCX,Freeport-McMoRan Inc.
+gap,GPS,Gap Inc.
+garmin,GRMN,Garmin Ltd.
+gartner,IT,Gartner Inc
+general dynamics,GD,General Dynamics
+general electric,GE,General Electric
+general mills,GIS,General Mills
+general motors,GM,General Motors
+genuine parts,GPC,Genuine Parts
+gilead,GILD,Gilead Sciences
+global payments,GPN,Global Payments Inc.
+globe life,GL,Globe Life Inc.
+goldman ,GS,Goldman Sachs Group
+grainger,GWW,Grainger (W.W.) Inc.
+h and r,HRB,H&R Block
+halliburton,HAL,Halliburton Co.
+hanes,HBI,Hanesbrands Inc
+hartford,HIG,Hartford Financial Svc.Gp.
+hasbro,HAS,Hasbro Inc.
+hca,HCA,HCA Healthcare
+healthpeak,PEAK,Healthpeak Properties
+henry schein,HSIC,Henry Schein
+hess,HES,Hess Corporation
+hp,HPE,Hewlett Packard Enterprise
+hilton,HLT,Hilton Worldwide Holdings Inc
+holly frontier,HFC,HollyFrontier Corp
+hologic,HOLX,Hologic
+home depot,HD,Home Depot
+honeywell,HON,Honeywell Int'l Inc.
+hormel,HRL,Hormel Foods Corp.
+host hotels,HST,Host Hotels & Resorts
+howmet,HWM,Howmet Aerospace
+hp,HPQ,HP Inc.
+humana,HUM,Humana Inc.
+huntington bancshares,HBAN,Huntington Bancshares
+huntington ingalls,HII,Huntington Ingalls Industries
+idex,IEX,IDEX Corporation
+idexx,IDXX,IDEXX Laboratories
+ihs,INFO,IHS Markit Ltd.
+illinois tool,ITW,Illinois Tool Works
+illumina,ILMN,Illumina Inc
+incyte,INCY,Incyte
+ingersoll rand,IR,Ingersoll Rand
+intel,INTC,Intel Corp.
+intercontinental exchange,ICE,Intercontinental Exchange
+ibm,IBM,International Business Machines
+iff,IFF,International Flavors & Fragrances
+ip,IP,International Paper
+ipg,IPG,Interpublic Group
+intuit,INTU,Intuit Inc.
+intuitive surgical,ISRG,Intuitive Surgical Inc.
+invesco,IVZ,Invesco Ltd.
+ipg,IPGP,IPG Photonics Corp.
+iqvia,IQV,IQVIA Holdings Inc.
+iron mountain,IRM,Iron Mountain Incorporated
+j b hunt,JBHT,J. B. Hunt Transport Services
+jack henry,JKHY,Jack Henry & Associates
+jacobs,J,Jacobs Engineering Group
+jm smucker,SJM,JM Smucker
+jnj,JNJ,Johnson & Johnson
+johnson controls,JCI,Johnson Controls International
+chase,JPM,JPMorgan Chase & Co.
+juniper,JNPR,Juniper Networks
+kansas city,KSU,Kansas City Southern
+kellogg,K,Kellogg Co.
+keycorp,KEY,KeyCorp
+keysight,KEYS,Keysight Technologies
+kimberly clark,KMB,Kimberly-Clark
+kimco,KIM,Kimco Realty
+kinder morgan,KMI,Kinder Morgan
+kla,KLAC,KLA Corporation
+kohls,KSS,Kohl's Corp.
+kraft,KHC,Kraft Heinz Co
+kroger,KR,Kroger Co.
+l brands,LB,L Brands Inc.
+l 3 harris,LHX,L3Harris Technologies
+labcorp,LH,Laboratory Corp. of America Holding
+lam,LRCX,Lam Research
+lamb weston,LW,Lamb Weston Holdings Inc
+sands,LVS,Las Vegas Sands
+leggett,LEG,Leggett & Platt
+leidos,LDOS,Leidos Holdings
+lennar,LEN,Lennar Corp.
+lilly eli,LLY,Lilly (Eli) & Co.
+lincoln,LNC,Lincoln National
+linde,LIN,Linde plc
+live nation,LYV,Live Nation Entertainment
+lkq,LKQ,LKQ Corporation
+lockheed martin,LMT,Lockheed Martin Corp.
+loews,L,Loews Corp.
+lowe's,LOW,Lowe's Cos.
+lyondell,LYB,LyondellBasell
+m&t bank,MTB,M&T Bank Corp.
+marathon,MRO,Marathon Oil Corp.
+marathon ,MPC,Marathon Petroleum
+market axess,MKTX,MarketAxess
+marriott,MAR,Marriott Int'l.
+marsh & mclennan,MMC,Marsh & McLennan
+martin marietta,MLM,Martin Marietta Materials
+masco,MAS,Masco Corp.
+mastercard,MA,Mastercard Inc.
+maxim,MXIM,Maxim Integrated Products Inc
+mccormick,MKC,McCormick & Co.
+mcdonalds,MCD,McDonald's Corp.
+mckesson,MCK,McKesson Corp.
+medtronic,MDT,Medtronic plc
+merck,MRK,Merck & Co.
+metlife,MET,MetLife Inc.
+mettler toledo,MTD,Mettler Toledo
+mgm,MGM,MGM Resorts International
+microchip,MCHP,Microchip Technology
+micron,MU,Micron Technology
+microsoft,MSFT,Microsoft Corp.
+mid america,MAA,Mid-America Apartments
+mohawk,MHK,Mohawk Industries
+coors,TAP,Molson Coors Beverage Company
+mondelez,MDLZ,Mondelez International
+monster,MNST,Monster Beverage
+moodys,MCO,Moody's Corp
+morgan stanley,MS,Morgan Stanley
+motorola,MSI,Motorola Solutions Inc.
+msci,MSCI,MSCI Inc
+mylan,MYL,Mylan N.V.
+nasdaq,NDAQ,Nasdaq Inc.
+national oil,NOV,National Oilwell Varco Inc.
+netapp,NTAP,NetApp
+netflix,NFLX,Netflix Inc.
+newell,NWL,Newell Brands
+newmont,NEM,Newmont Corporation
+news corp,NWSA,News Corp. Class A
+news corp,NWS,News Corp. Class B
+nextera,NEE,NextEra Energy
+nielsen ,NLSN,Nielsen Holdings
+nike,NKE,Nike Inc.
+nisource,NI,NiSource Inc.
+noble,NBL,Noble Energy Inc
+norfolk southern,NSC,Norfolk Southern Corp.
+northern trust,NTRS,Northern Trust Corp.
+northrop grumman,NOC,Northrop Grumman
+lifelock,NLOK,NortonLifeLock
+norwegian cruise line,NCLH,Norwegian Cruise Line Holdings
+nrg,NRG,NRG Energy
+nucor,NUE,Nucor Corp.
+nvidia,NVDA,Nvidia Corporation
+nvr,NVR,NVR Inc.
+oreilly,ORLY,O'Reilly Automotive
+occidental,OXY,Occidental Petroleum
+old dominion,ODFL,Old Dominion Freight Line
+omnicom,OMC,Omnicom Group
+oneok,OKE,ONEOK
+oracle,ORCL,Oracle Corp.
+otis ,OTIS,Otis Worldwide
+paccar,PCAR,PACCAR Inc.
+packaging corporation,PKG,Packaging Corporation of America
+parker hannifin,PH,Parker-Hannifin
+paychex,PAYX,Paychex Inc.
+paycom,PAYC,Paycom
+paypal,PYPL,PayPal
+pentair,PNR,Pentair plc
+peoples united,PBCT,People's United Financial
+pepsi,PEP,PepsiCo Inc.
+perkin elmer,PKI,PerkinElmer
+perrigo,PRGO,Perrigo
+pfizer,PFE,Pfizer Inc.
+phillip morris,PM,Philip Morris International
+phillips 66,PSX,Phillips 66
+pinnacle west,PNW,Pinnacle West Capital
+pioneer ,PXD,Pioneer Natural Resources
+pnc,PNC,PNC Financial Services
+ppg,PPG,PPG Industries
+ppl,PPL,PPL Corp.
+principal financial,PFG,Principal Financial Group
+p and g,PG,Procter & Gamble
+progressive,PGR,Progressive Corp.
+prologis,PLD,Prologis
+prudential,PRU,Prudential Financial
+pseg,PEG,Public Service Enterprise Group (PSEG)
+public storage,PSA,Public Storage
+pulte,PHM,PulteGroup
+pvh,PVH,PVH Corp.
+qorvo,QRVO,Qorvo
+qualcomm,QCOM,QUALCOMM Inc.
+quanta,PWR,Quanta Services Inc.
+quest,DGX,Quest Diagnostics
+ralph lauren,RL,Ralph Lauren Corporation
+raymond james,RJF,Raymond James Financial Inc.
+raytheon,RTX,Raytheon Technologies
+realty income,O,Realty Income Corporation
+regency,REG,Regency Centers Corporation
+regeneron,REGN,Regeneron Pharmaceuticals
+regions,RF,Regions Financial Corp.
+republic,RSG,Republic Services Inc
+resmed,RMD,ResMed
+robert half,RHI,Robert Half International
+rockwell,ROK,Rockwell Automation Inc.
+rollins,ROL,Rollins Inc.
+roper,ROP,Roper Technologies
+ross stores,ROST,Ross Stores
+royal caribbean,RCL,Royal Caribbean Cruises Ltd
+s&p ,SPGI,S&P Global Inc.
+salesforce,CRM,Salesforce.com
+sba ,SBAC,SBA Communications
+schlumberger,SLB,Schlumberger Ltd.
+seagate,STX,Seagate Technology
+sealed air,SEE,Sealed Air
+sempra,SRE,Sempra Energy
+servicenow,NOW,ServiceNow
+sherwin williams,SHW,Sherwin-Williams
+simon,SPG,Simon Property Group Inc
+skyworks,SWKS,Skyworks Solutions
+sl green,SLG,SL Green Realty
+snap on,SNA,Snap-on
+southern company,SO,Southern Company
+southwest,LUV,Southwest Airlines
+black and decker,SWK,Stanley Black & Decker
+starbucks,SBUX,Starbucks Corp.
+state street,STT,State Street Corp.
+steris,STE,STERIS plc
+stryker,SYK,Stryker Corp.
+svb,SIVB,SVB Financial
+synchrony,SYF,Synchrony Financial
+synopsys,SNPS,Synopsys Inc.
+sysco,SYY,Sysco Corp.
+t mobile,TMUS,T-Mobile US
+t rowe price,TROW,T. Rowe Price Group
+take two,TTWO,Take-Two Interactive
+tapestry,TPR,Tapestry Inc.
+target,TGT,Target Corp.
+te connectivity,TEL,TE Connectivity Ltd.
+technip ,FTI,TechnipFMC
+teledyne,TDY,Teledyne Technologies
+teleflex,TFX,Teleflex
+texas instruments,TXN,Texas Instruments
+textron,TXT,Textron Inc.
+ny mellon,BK,The Bank of New York Mellon
+clorox,CLX,The Clorox Company
+cooper,COO,The Cooper Companies
+hershey,HSY,The Hershey Company
+mosaic,MOS,The Mosaic Company
+travelers,TRV,The Travelers Companies Inc.
+walt disney,DIS,The Walt Disney Company
+thermo fisher,TMO,Thermo Fisher Scientific
+tiffany,TIF,Tiffany & Co.
+tjx,TJX,TJX Companies Inc.
+tractor supply,TSCO,Tractor Supply Company
+trane,TT,Trane Technologies plc
+transdigm,TDG,TransDigm Group
+truist,TFC,Truist Financial
+twitter,TWTR,Twitter Inc.
+tyler,TYL,Tyler Technologies
+tyson,TSN,Tyson Foods
+us bancorp,USB,U.S. Bancorp
+udr,UDR,UDR Inc.
+ulta,ULTA,Ulta Beauty
+under armour,UAA,Under Armour (Class A)
+under armour,UA,Under Armour (Class C)
+union pacific,UNP,Union Pacific Corp
+united airlines,UAL,United Airlines Holdings
+united health,UNH,United Health Group Inc.
+united parcel,UPS,United Parcel Service
+united rental,URI,United Rentals Inc.
+universal health,UHS,Universal Health Services
+unum,UNM,Unum Group
+valero,VLO,Valero Energy
+varian,VAR,Varian Medical Systems
+ventas,VTR,Ventas Inc
+verisign,VRSN,Verisign Inc.
+verisk,VRSK,Verisk Analytics
+verizon ,VZ,Verizon Communications
+vertex,VRTX,Vertex Pharmaceuticals Inc
+vf ,VFC,VF Corporation
+viacom,VIAC,ViacomCBS
+visa,V,Visa Inc.
+vornado,VNO,Vornado Realty Trust
+vulcan,VMC,Vulcan Materials
+wr berkley,WRB,W. R. Berkley Corporation
+wabtec,WAB,Wabtec Corporation
+walgreens,WBA,Walgreens Boots Alliance
+walmart,WMT,Walmart
+waste management,WM,Waste Management Inc.
+waters,WAT,Waters Corporation
+wec,WEC,WEC Energy Group
+wells fargo,WFC,Wells Fargo
+welltower,WELL,Welltower Inc.
+west pharma,WST,West Pharmaceutical Services
+western digital,WDC,Western Digital
+western union,WU,Western Union Co
+west rock,WRK,WestRock
+weyerhauser,WY,Weyerhaeuser
+whirlpool,WHR,Whirlpool Corp.
+williams,WMB,Williams Companies
+willis towers,WLTW,Willis Towers Watson
+wynn ,WYNN,Wynn Resorts Ltd
+xcel,XEL,Xcel Energy Inc
+xerox,XRX,Xerox
+xilinix,XLNX,Xilinx
+xylem,XYL,Xylem Inc.
+yum,YUM,Yum! Brands Inc
+zebra,ZBRA,Zebra Technologies
+zimmer,ZBH,Zimmer Biomet Holdings
+zions,ZION,Zions Bancorp
+zoetis,ZTS,Zoetis

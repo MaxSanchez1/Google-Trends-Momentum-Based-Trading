@@ -81,7 +81,7 @@ def tick_to_sig(company_name, ticker, start, end):
     signal_df = signal_df.drop(columns=['cumsum', 'reset', 'val'])
 
     signal_df['Bool_Signal'] = signal_df.apply(
-        lambda row: True if (row.Bool_Temp and row.consecutive_days_true <= 20 and row.consecutive_days_true > 2) else False, axis=1)
+        lambda row: True if (row.Bool_Temp and row.consecutive_days_true <= 15 and row.consecutive_days_true > 3) else False, axis=1)
 
     return signal_df
 #
@@ -181,6 +181,7 @@ cheap_stocks = {
     "Sorrento": "SRNE",
     "macys": "M",
     # "": "",
+    # this works really really well of course but it is probably just overtuned to this
     # "hertz": "HTZ",
     "genius": "GNUS",
     "apple": "AAPL",
@@ -191,6 +192,10 @@ cheap_stocks = {
     "snapchat": "SNAP",
     "uber": "UBER",
     "facebook": "FB",
+}
+
+top_100_rh = {
+
 }
 
 
@@ -211,13 +216,12 @@ print(result['Signal Return'].mean())
 
 
 # forward-looking signal alert
-# - find today's date and subtract 6 months from it. That's the start and today is the end.
+# - find today's date and subtract 7 months from it. That's the start and today is the end.
 # - plug that start and end into tick_to_sig
 # - if the bottom row that we have historical data for (36 hours ago) is true, we buy and we hold until the next peak
+# - or until 10 days after the signal has been true consecutively
 
-# TODO: current issue is that historical is 36 hours old so I'm going to have to make the best prediction
-# TODO:     I can with data that is a couple days old. Maybe now I'll try and do the more volatile strategy
-# TODO:     that waits for a second peak and buys all of the way through. This doesn't need as up-to-date data
+
 def forward_looking_signal(company_name, ticker):
     # today
     end_local = datetime.datetime.now()
@@ -225,10 +229,11 @@ def forward_looking_signal(company_name, ticker):
     start_local = end_local + relativedelta(months=-7)
     # running the signal generation
     signal_dataframe = tick_to_sig(company_name, ticker, start_local, end_local)
-    print(signal_dataframe)
+    # usually guaranteed to have data from 4 days ago
+    print(signal_dataframe.tail(4))
 
 
-# print(forward_looking_signal("hertz", "HTZ"))
+# print(forward_looking_signal("apple", "AAPL"))
 
 
 
