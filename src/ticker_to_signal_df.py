@@ -34,7 +34,9 @@ def tick_to_sig(company_name, ticker, start, end):
     signal_df['VolumeChangePercent'] = signal_df.Volume.pct_change() * 100
 
     # Building the trend signal from Google Trends
-    pytr = TrendReq(hl='en-US', tz=360, geo='US')
+    # pytr = TrendReq(hl='en-US', tz=360, geo='US')
+    # got rate limited so I have to change it to this for the time being
+    pytr = TrendReq(hl='en-US', tz=360, timeout=(10,25), proxies=['https://34.203.233.13:80',], retries=2, backoff_factor=0.1, requests_args={'verify':False})
     name_plus_robinhood = str(company_name) + " stock"
     kw_list = [name_plus_robinhood]
     tf = start.strftime('%Y-%m-%d') + " " + end.strftime('%Y-%m-%d')
@@ -49,15 +51,20 @@ def tick_to_sig(company_name, ticker, start, end):
     # Calculate current Trend score's percent change over the previous one
     # signal_df['TrendChangePercent'] = signal_df[kw_list].pct_change().fillna(0) * 100
 
-    # Calculate the raw gain in trend score from the previous day
-    signal_df['TrendChangeRAW'] = signal_df[name_plus_robinhood].diff()
+    # these fail if there's not enough data when the trend score is calculated, return an empty df in that case
+    try:
+        # Calculate the raw gain in trend score from the previous day
+        signal_df['TrendChangeRAW'] = signal_df[name_plus_robinhood].diff()
 
-    # calculate the local maximum within the given period
-    signal_df['LocalMax'] = signal_df[name_plus_robinhood].cummax()
+        # calculate the local maximum within the given period
+        signal_df['LocalMax'] = signal_df[name_plus_robinhood].cummax()
 
-    # calculate the difference in cumulative maximum day to day to find outlier days where the local max went up a lot
-    signal_df['LocalMaxChange'] = signal_df['LocalMax'].diff()
-
+        # calculate the difference in cumulative maximum day to day to find outlier days where the local max went up a lot
+        signal_df['LocalMaxChange'] = signal_df['LocalMax'].diff()
+    except KeyError:
+        signal_df['TrendChangeRAW'] = 0
+        signal_df['LocalMax'] = 0
+        signal_df['LocalMaxChange'] = 0
 
     # looking for a trend that is significant but isn't too high. We want to buy from here until the next peak or
     # for some amount of days after where there is no peak.
@@ -81,7 +88,8 @@ def tick_to_sig(company_name, ticker, start, end):
     signal_df = signal_df.drop(columns=['cumsum', 'reset', 'val'])
 
     signal_df['Bool_Signal'] = signal_df.apply(
-        lambda row: True if (row.Bool_Temp and row.consecutive_days_true <= 15 and row.consecutive_days_true > 3) else False, axis=1)
+        # TODO: put this back to 3-15
+        lambda row: True if (row.Bool_Temp) else False, axis=1)
 
     return signal_df
 #
@@ -111,6 +119,7 @@ sample_dict = {
 # method that takes in df of signals and tells you how much you'd make if you bought
 # at the close of the day of the signal and sold and the close of the next day
 def calculate_earnings_pct(company_name, ticker, start, end):
+    print(company_name)
     signal_df = tick_to_sig(company_name, ticker, start, end)
     #print(signal_df)
     signal_df_only_true = signal_df[signal_df.Bool_Signal]
@@ -209,10 +218,10 @@ def stock_to_result(dict_of_stocks, start, end):
         lambda row: calculate_earnings_pct(row.Company, dict_of_stocks[row.Company], start, end), axis=1)
     return return_df
 
-result = stock_to_result(cheap_stocks, start_master, end_master)
-print(result)
-print("here is the average return on your money")
-print(result['Signal Return'].mean())
+# result = stock_to_result(cheap_stocks, start_master, end_master)
+# print(result)
+# print("here is the average return on your money")
+# print(result['Signal Return'].mean())
 
 
 # forward-looking signal alert
@@ -234,6 +243,47 @@ def forward_looking_signal(company_name, ticker):
 
 
 # print(forward_looking_signal("apple", "AAPL"))
+
+
+
+# building new stock dict to crunch data and then compare it with its stock price and volume to see if
+# there are any trends
+# csv --> df
+big_df = pd.read_csv('stock_dict_with_prices_and_names_and_volume.csv')
+# drop the rows we don't have tickers for
+big_df = big_df.dropna(subset=['ticker'], axis=0)
+# get rid of the weird formatting so it's just the ticker
+big_df['ticker'] = big_df['ticker'].apply(
+    lambda tick: str(tick)[2:len(tick)-1]
+)
+# get rid of the bracket at the end and cast to int for readability
+big_df['average_volume'] = big_df['average_volume'].apply(
+    lambda aver: int(float(str(aver)[1:len(aver)-1]))
+)
+
+# add series containing the gain/loss in percent for the strategy
+big_df['ROI_with_signal'] = big_df.apply(
+    lambda row: calculate_earnings_pct(row.short_name, row.ticker, start_master, end_master)
+    , axis=1
+)
+
+print("Here's the big results:")
+
+# what is the average return on investment with the strategy
+print("Average Return:")
+print(big_df['ROI_with_signal'].mean())
+
+# how does stock price correlate with the strategy
+print("Correlation between ROI and price")
+print(big_df['ROI_with_signal'].corr(big_df['average_price']))
+
+# how does volume correlate with the stratgey
+print("Correlation between ROI and volume")
+print(big_df['ROI_with_signal'].corr(big_df['average_volume']))
+
+
+#print(big_df)
+
 
 
 

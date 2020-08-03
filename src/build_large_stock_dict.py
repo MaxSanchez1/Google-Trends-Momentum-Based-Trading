@@ -23,21 +23,29 @@ for item in stock_dict.keys():
         price_df = web.DataReader(ticker, 'yahoo', start_master, end_master)
         # get the average price of the stock, grabbed the open here and took the average of the col
         average_price = price_df['Open'].mean()
+        average_volume = price_df['Volume'].mean()
         # add more data to the stock's key/value pair (average price)
         stock_dict[item].append(average_price)
+        stock_dict[item].append(average_volume)
         print(stock_dict[item])
     except Exception as e:
         stock_dict[item] = stock_dict[item].append(-1.00)
 
 print(stock_dict)
 
-with open('stock_dict_with_prices_and_names.csv', 'w', newline='') as csv_file:
+with open('stock_dict_with_prices_and_names_and_volume.csv', 'w', newline='') as csv_file:
     writer = csv.writer(csv_file)
     for key, value in stock_dict.items():
         writer.writerow([key, value])
 
 csvfile.close()
 csv_file.close()
+
+
+
+
+
+
 
 
 

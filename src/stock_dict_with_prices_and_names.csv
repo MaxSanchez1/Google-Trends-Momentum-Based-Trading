@@ -1,496 +1,497 @@
-3m,"['MMM', '3M Company', 154.51514539856842]"
-ao smith,"['AOS', 'A.O. Smith Corp', 43.62159427698108]"
-abbott,"['ABT', 'Abbott Laboratories', 87.58847814366437]"
-abbvie,"['ABBV', 'AbbVie Inc.', 87.7566667639691]"
-abiomed,"['ABMD', 'ABIOMED Inc', 190.59239075149316]"
-accenture,"['ACN', 'Accenture plc', 193.2668834078139]"
-blizzard,"['ATVI', 'Activision Blizzard', 65.8007971169292]"
-adobe,"['ADBE', 'Adobe Inc.', 363.8784062482309]"
-advanced auto,"['AAP', 'Advance Auto Parts', 129.61970995474553]"
-AMD,"['AMD', 'Advanced Micro Devices Inc', 50.957608596138336]"
-AES,"['AES', 'AES Corp', 15.447898484658504]"
-aflac,"['AFL', 'AFLAC Inc', 40.4483333947002]"
-agilient,"['A', 'Agilent Technologies Inc', 81.93456536445065]"
-air products ,"['APD', 'Air Products & Chemicals Inc', 231.63434777743575]"
-akamai,"['AKAM', 'Akamai Technologies Inc', 97.94398537234983]"
-alaska air,"['ALK', 'Alaska Air Group Inc', 43.02920288970505]"
-albemarle,"['ALB', 'Albemarle Corp', 72.92978270157523]"
-alexandria,"['ARE', 'Alexandria Real Estate Equities', 155.42079759680706]"
-alexion,"['ALXN', 'Alexion Pharmaceuticals', 102.91963748655458]"
-align,"['ALGN', 'Align Technology', 236.92202836188716]"
-allegion,"['ALLE', 'Allegion', 108.49949275583461]"
-alliant,"['LNT', 'Alliant Energy Corp', 51.45362323263417]"
-allstate,"['ALL', 'Allstate Corp', 102.32507241290548]"
-google ,"['GOOG', 'Alphabet Inc. (Class C)', 1364.40356622226]"
-altria,"['MO', 'Altria Group Inc', 41.53181145156639]"
-amazon,"['AMZN', 'Amazon.com Inc.', 2253.527975331182]"
-amcor,"['AMCR', 'Amcor plc', 9.547681113947993]"
-ameren,"['AEE', 'Ameren Corp', 75.68188393634298]"
-americal airlines,"['AAL', 'American Airlines Group', 17.067753639774047]"
-americal electric,"['AEP', 'American Electric Power', 87.62811599952587]"
-american express,"['AXP', 'American Express Co', 103.381521805473]"
-american international,"['AIG', 'American International Group', 35.08942024949668]"
-american tower,"['AMT', 'American Tower Corp.', 241.81036222153816]"
-american water works,"['AWK', 'American Water Works Company Inc', 127.21434772878453]"
-ameriprise financial,"['AMP', 'Ameriprise Financial', 139.24615909742272]"
-amerisource,"['ABC', 'AmerisourceBergen Corp', 90.85615943134695]"
-ametek,"['AME', 'AMETEK Inc.', 87.25470999012823]"
-amgen,"['AMGN', 'Amgen Inc.', 225.6450719418733]"
-amphenol,"['APH', 'Amphenol Corp', 92.7568842569987]"
-analog devices,"['ADI', 'Analog Devices Inc.', 110.60253651936848]"
-ansys,"['ANSS', 'ANSYS', 265.04166788294697]"
-anthem,"['ANTM', 'Anthem', 269.0977533312811]"
-aon,"['AON', 'Aon plc', 195.62637627643088]"
-apache,"['APA', 'Apache Corporation', 16.54195649727531]"
-apartment investment,"['AIV', 'Apartment Investment & Management', 42.18565229056538]"
-apple,"['AAPL', 'Apple Inc.', 308.59108756245047]"
-applied materials,"['AMAT', 'Applied Materials Inc.', 56.332608761994734]"
-aptiv,"['APTV', 'Aptiv PLC', 74.16478273142938]"
-archer,"['ADM', 'Archer-Daniels-Midland Co', 39.23826089112655]"
-arista,"['ANET', 'Arista Networks', 211.88202877321106]"
-AJG,"['AJG', 'Arthur J. Gallagher & Co.', 92.70492774852808]"
-assurant,"['AIZ', 'Assurant', 112.36268084982167]"
-at&t,"['T', 'AT&T Inc.', 32.854420330213465]"
-atmos,"['ATO', 'Atmos Energy', 104.91753592007402]"
-autodesk,"['ADSK', 'Autodesk Inc.', 194.27811641969544]"
-ADP ,"['ADP', 'Automatic Data Processing', 151.57847843999448]"
-autozone,"['AZO', 'AutoZone Inc', 1054.8129674939141]"
-avalon bay,"['AVB', 'AvalonBay Communities', 177.61847863681075]"
-avery dennison,"['AVY', 'Avery Dennison Corp', 116.07362332551375]"
-baker hughes,"['BKR', 'Baker Hughes Co', 16.605217408442844]"
-ball ,"['BLL', 'Ball Corp', 68.95528978541277]"
-bank of america,"['BAC', 'Bank of America Corp', 26.509420201398324]"
-baxter,"['BAX', 'Baxter International Inc.', 86.55036240729733]"
-becton,"['BDX', 'Becton Dickinson', 250.4342025535694]"
-berkshire hathaway,
-best buy,"['BBY', 'Best Buy Co. Inc.', 78.41188375500666]"
-bio rad,"['BIO', 'Bio-Rad Laboratories', 410.9134782431782]"
-bio gen,"['BIIB', 'Biogen Inc.', 299.1562323086504]"
-blackrock,"['BLK', 'BlackRock', 504.0477540389351]"
-boeing,"['BA', 'Boeing Company', 211.55007287730342]"
-booking,"['BKNG', 'Booking Holdings Inc', 1645.014422872792]"
-borg warner,"['BWA', 'BorgWarner', 31.845289783201356]"
-boston properties,"['BXP', 'Boston Properties', 108.05971018473308]"
-boston scientific,"['BSX', 'Boston Scientific', 37.36268102949944]"
-bristol myers,"['BMY', 'Bristol-Myers Squibb', 60.32369536247806]"
-broadcom,"['AVGO', 'Broadcom Inc.', 284.2400727202927]"
-broadridge,"['BR', 'Broadridge Financial Solutions', 116.0102901182313]"
-brown-forman,
-ch robinson,"['CHRW', 'C. H. Robinson Worldwide', 74.37543476491734]"
-cabot,"['COG', 'Cabot Oil & Gas', 17.608840603759322]"
-cadence,"['CDNS', 'Cadence Design Systems', 78.46181172909944]"
-campbell,"['CPB', 'Campbell Soup', 48.91623184646385]"
-capital one,"['COF', 'Capital One Financial', 74.0305795531342]"
-cardinal,"['CAH', 'Cardinal Health Inc.', 51.69210143711256]"
-carmax,"['KMX', 'Carmax Inc', 82.27956534123075]"
-carnival,"['CCL', 'Carnival Corp.', 24.494347758915115]"
-carrier,"['CARR', 'Carrier Global', 18.752941053053913]"
-caterpillar,"['CAT', 'Caterpillar Inc.', 123.8700724615567]"
-cboe,"['CBOE', 'Cboe Global Markets', 104.10405758843906]"
-cbre,"['CBRE', 'CBRE Group', 48.753188547880754]"
-cdw,"['CDW', 'CDW', 115.307101595229]"
-celanese,"['CE', 'Celanese', 90.97782591114874]"
-centene,"['CNC', 'Centene Corporation', 63.05884026790011]"
-centerpoint,"['CNP', 'CenterPoint Energy', 20.063260900801506]"
-century link,"['CTL', 'CenturyLink Inc', 11.105797062749447]"
-cerner,"['CERN', 'Cerner', 69.8978986049044]"
-cf industries,"['CF', 'CF Industries Holdings Inc', 32.530579622241035]"
-schwab,"['SCHW', 'Charles Schwab Corporation', 38.450144919796266]"
-charter,"['CHTR', 'Charter Communications', 501.0577540743178]"
-chevron,"['CVX', 'Chevron Corp.', 93.6392029195592]"
-chipotle,"['CMG', 'Chipotle Mexican Grill', 882.0815956005151]"
-chubb,"['CB', 'Chubb Limited', 129.51492762911147]"
-church and dwight,"['CHD', 'Church & Dwight', 72.59891308217809]"
-cigna,"['CI', 'CIGNA Corp.', 190.85333384638247]"
-cincinnati,"['CINF', 'Cincinnati Financial', 81.65760880622311]"
-cintas,"['CTAS', 'Cintas Corporation', 247.9482619796974]"
-cisco,"['CSCO', 'Cisco Systems', 44.071956579236016]"
-citigroup,"['C', 'Citigroup Inc.', 56.82391313193501]"
-citizens financial,"['CFG', 'Citizens Financial Group', 27.417681272479072]"
-citrix,"['CTXS', 'Citrix Systems', 133.1410870206529]"
-cme,"['CME', 'CME Group Inc.', 186.97862321051997]"
-cms,"['CMS', 'CMS Energy', 60.743985549263336]"
-coca cola,"['KO', 'Coca-Cola Company', 49.667753661888234]"
-cognizant,"['CTSH', 'Cognizant Technology Solutions', 56.652753470600516]"
-colgate,"['CL', 'Colgate-Palmolive', 71.01731869794321]"
-comcast,"['CMCSA', 'Comcast Corp.', 40.08804348931796]"
-comerica,"['CMA', 'Comerica Inc.', 43.88760872163634]"
-conagra,"['CAG', 'Conagra Brands', 32.12268134130948]"
-concho,"['CXO', 'Concho Resources', 61.43876797219981]"
-phillips,"['COP', 'ConocoPhillips', 45.30333331011344]"
-edison,"['EIX', ""Edison Int'l"", 62.753405805947125]"
-constellation,"['STZ', 'Constellation Brands', 172.5850721165754]"
-copart,"['CPRT', 'Copart Inc', 84.50710175002831]"
-corning,"['GLW', 'Corning Inc.', 24.599710201871567]"
-corteva,"['CTVA', 'Corteva', 26.782101479129516]"
-costco,"['COST', 'Costco Wholesale Corp.', 305.0340582806131]"
-coty,"['COTY', 'Coty Inc', 6.905869528867196]"
-crown castle,"['CCI', 'Crown Castle International Corp.', 156.3117392719656]"
-csx,"['CSX', 'CSX Corp.', 68.25992777727652]"
-cummins,"['CMI', 'Cummins Inc.', 159.6488409180572]"
-cvs,"['CVS', 'CVS Health', 64.80579718990603]"
-d r horton,"['DHI', 'D. R. Horton', 50.99065230549245]"
-danaher,"['DHR', 'Danaher Corp.', 159.3628981769949]"
-darden,"['DRI', 'Darden Restaurants', 83.51869591422702]"
-davita,"['DVA', 'DaVita Inc.', 78.5799275273862]"
-deere,"['DE', 'Deere & Co.', 152.7377533290697]"
-delta,"['DAL', 'Delta Air Lines Inc.', 36.71818858989771]"
-sirona,"['XRAY', 'Dentsply Sirona', 46.32768130647963]"
-devon,"['DVN', 'Devon Energy', 14.414420297180397]"
-dexcom,"['DXCM', 'DexCom', 313.92557901575947]"
-diamondback,"['FANG', 'Diamondback Energy', 51.030000002487846]"
-realty trust,"['DLR', 'Digital Realty Trust Inc', 135.3418846130371]"
-discover,"['DFS', 'Discover Financial Services', 54.69246388863826]"
-discovery,"['DISCK', 'Discovery Inc. (Class C)', 22.345217455988344]"
-dish,"['DISH', 'Dish Network', 30.386159371638644]"
-dollar general,"['DG', 'Dollar General', 169.47166630841684]"
-dollar tree,"['DLTR', 'Dollar Tree', 85.13659457883973]"
-dominion,"['D', 'Dominion Energy', 80.42137693322223]"
-dominos,"['DPZ', ""Domino's Pizza"", 343.4140585194463]"
-dover,"['DOV', 'Dover Corporation', 99.15478250254755]"
-dow,"['DOW', 'Dow Inc.', 39.87757257102192]"
-dte,"['DTE', 'DTE Energy Co.', 111.3598550990008]"
-duke,"['DRE', 'Duke Realty Corp', 34.32028977767281]"
-dupont,"['DD', 'DuPont de Nemours Inc', 48.234275403230086]"
-dxc,"['DXC', 'DXC Technology', 20.796159523120824]"
-etrade,"['ETFC', 'E*Trade', 43.466231608736344]"
-eastman,"['EMN', 'Eastman Chemical', 64.40731888923092]"
-eaton,"['ETN', 'Eaton Corporation', 87.16449278679447]"
-ebay,"['EBAY', 'eBay Inc.', 40.21949273261471]"
-ecolab,"['ECL', 'Ecolab Inc.', 191.91376838131228]"
-edwards,"['EW', 'Edwards Lifesciences', 71.51376820992732]"
-ea,"['EA', 'Electronic Arts', 113.87797076460244]"
-emerson,"['EMR', 'Emerson Electric Company', 61.378116054811336]"
-entergy,"['ETR', 'Entergy Corp.', 106.87760892121688]"
-eog,"['EOG', 'EOG Resources', 55.953043384828426]"
-equifax,"['EFX', 'Equifax Inc.', 148.36557996445808]"
-equinix,"['EQIX', 'Equinix', 644.3660848866339]"
-equity,"['EQR', 'Equity Residential', 68.60811584583227]"
-essex,"['ESS', 'Essex Property Trust Inc.', 260.3630428590636]"
-estee lauder,"['EL', 'Estée Lauder Companies', 186.23804330134737]"
-everest,"['RE', 'Everest Re Group Ltd.', 223.4171728604082]"
-evergy,"['EVRG', 'Evergy', 62.33855067819789]"
-eversource,"['ES', 'Eversource Energy', 85.23528980863267]"
-exelon,"['EXC', 'Exelon Corp.', 40.35985497460849]"
-expedia,"['EXPE', 'Expedia Group', 84.6060145834218]"
-expeditors,"['EXPD', 'Expeditors', 72.61463748544887]"
-extra space,"['EXR', 'Extra Space Storage', 98.29782613118489]"
-exxon,"['XOM', 'Exxon Mobil Corp.', 49.612101375192836]"
-f5,"['FFIV', 'F5 Networks', 129.7746378580729]"
-facebook,"['FB', 'Facebook Inc.', 205.44797095699587]"
-fastenal,"['FAST', 'Fastenal Co', 37.296666725822114]"
-frt,"['FRT', 'Federal Realty Investment Trust', 96.56594218378481]"
-fedex,"['FDX', 'FedEx Corporation', 135.7978987210039]"
-fidelity,"['FIS', 'Fidelity National Information Services', 135.2379710432412]"
-fifth third,"['FITB', 'Fifth Third Bancorp', 21.485579684160758]"
-first republic,"['FRC', 'First Republic Bank', 104.47413038170856]"
-first energy,"['FE', 'FirstEnergy Corp', 43.565797087075055]"
-fiserv,"['FISV', 'Fiserv Inc', 105.14036244931428]"
-fleetcor,"['FLT', 'FleetCor Technologies Inc', 256.56514529905456]"
-flir,"['FLIR', 'FLIR Systems', 44.05376832381539]"
-flowserve,"['FLS', 'Flowserve Corporation', 33.10021745985833]"
-fmc,"['FMC', 'FMC Corporation', 93.45188395182292]"
-ford,"['F', 'Ford Motor Company', 6.522246388421542]"
-fortinet,"['FTNT', 'Fortinet', 118.25869596177253]"
-fortive,"['FTV', 'Fortive Corp', 65.86492765122566]"
-fortune brands,"['FBHS', 'Fortune Brands Home & Security', 58.79898555036904]"
-fox,"['FOX', 'Fox Corporation (Class B)', 29.137681062670723]"
-franklin,"['BEN', 'Franklin Resources', 20.932391291079313]"
-freeport,"['FCX', 'Freeport-McMoRan Inc.', 10.098913033803305]"
-gap,"['GPS', 'Gap Inc.', 11.980797152588332]"
-garmin,"['GRMN', 'Garmin Ltd.', 88.96311602385148]"
-gartner,"['IT', 'Gartner Inc', 125.85760840816775]"
-general dynamics,"['GD', 'General Dynamics', 153.0066667639691]"
-general electric,"['GE', 'General Electric', 8.582173889961796]"
-general mills,"['GIS', 'General Mills', 57.06000012936799]"
-general motors,"['GM', 'General Motors', 27.321014542510543]"
-genuine parts,"['GPC', 'Genuine Parts', 84.297898499862]"
-gilead,"['GILD', 'Gilead Sciences', 73.42384059187295]"
-global payments,"['GPN', 'Global Payments Inc.', 173.9242032368978]"
-globe life,"['GL', 'Globe Life Inc.', 84.0281885119452]"
-goldman ,"['GS', 'Goldman Sachs Group', 200.4546379421068]"
-grainger,"['GWW', 'Grainger (W.W.) Inc.', 294.88420237665594]"
-h and r,"['HRB', 'H&R Block', 18.01913043035977]"
-halliburton,"['HAL', 'Halliburton Co.', 14.01775362180627]"
-hanes,"['HBI', 'Hanesbrands Inc', 11.444927509280218]"
-hartford,"['HIG', 'Hartford Financial Svc.Gp.', 44.54304335773855]"
-hasbro,"['HAS', 'Hasbro Inc.', 79.21659403261931]"
-hca,"['HCA', 'HCA Healthcare', 115.34550724858823]"
-healthpeak,"['PEAK', 'Healthpeak Properties', 28.870652129684668]"
-henry schein,"['HSIC', 'Henry Schein', 59.75644968558049]"
-hess,"['HES', 'Hess Corporation', 49.838043516960695]"
-hp,"['HPQ', 'HP Inc.', 17.9655072654503]"
-hilton,"['HLT', 'Hilton Worldwide Holdings Inc', 85.0274637747502]"
-holly frontier,"['HFC', 'HollyFrontier Corp', 33.0631159492161]"
-hologic,"['HOLX', 'Hologic', 49.30579721754876]"
-home depot,"['HD', 'Home Depot', 226.44000078284222]"
-honeywell,"['HON', ""Honeywell Int'l Inc."", 151.58913040161133]"
-hormel,"['HRL', 'Hormel Foods Corp.', 46.69855081862298]"
-host hotels,"['HST', 'Host Hotels & Resorts', 13.115507312442945]"
-howmet,"['HWM', 'Howmet Aerospace', 17.195670157363736]"
-humana,"['HUM', 'Humana Inc.', 358.89717367421025]"
-huntington bancshares,"['HBAN', 'Huntington Bancshares', 10.42094201626985]"
-huntington ingalls,"['HII', 'Huntington Ingalls Industries', 206.22202887051347]"
-idex,"['IEX', 'IDEX Corporation', 155.28608675970548]"
-idexx,"['IDXX', 'IDEXX Laboratories', 280.54492707183397]"
-ihs,"['INFO', 'IHS Markit Ltd.', 70.58231876207435]"
-illinois tool,"['ITW', 'Illinois Tool Works', 167.3221012060193]"
-illumina,"['ILMN', 'Illumina Inc', 314.67311494246775]"
-incyte,"['INCY', 'Incyte', 87.56992754728898]"
-ingersoll rand,"['IR', 'Ingersoll Rand', 29.894565209098484]"
-intel,"['INTC', 'Intel Corp.', 59.36144942131595]"
-intercontinental exchange,"['ICE', 'Intercontinental Exchange', 91.24644929084225]"
-ibm,"['IBM', 'International Business Machines', 126.22869563448256]"
-iff,"['IFF', 'International Flavors & Fragrances', 125.4979709127675]"
-ip,"['IP', 'International Paper', 36.2887680772422]"
-ipg,"['IPGP', 'IPG Photonics Corp.', 138.96811598625737]"
-intuit,"['INTU', 'Intuit Inc.', 274.8203623674918]"
-intuitive surgical,"['ISRG', 'Intuitive Surgical Inc.', 547.2642026154891]"
-invesco,"['IVZ', 'Invesco Ltd.', 11.931231868439827]"
-iqvia,"['IQV', 'IQVIA Holdings Inc.', 139.89601511195087]"
-iron mountain,"['IRM', 'Iron Mountain Incorporated', 27.69123183817103]"
-j b hunt,"['JBHT', 'J. B. Hunt Transport Services', 107.66840561576511]"
-jack henry,"['JKHY', 'Jack Henry & Associates', 166.13101384259653]"
-jacobs,"['J', 'Jacobs Engineering Group', 85.69536214634992]"
-jm smucker,"['SJM', 'JM Smucker', 109.14862320388573]"
-jnj,"['JNJ', 'Johnson & Johnson', 143.83304363748303]"
-johnson controls,"['JCI', 'Johnson Controls International', 34.09217388042505]"
-chase,"['JPM', 'JPMorgan Chase & Co.', 107.09086979299352]"
-juniper,"['JNPR', 'Juniper Networks', 22.71644932290782]"
-kansas city,"['KSU', 'Kansas City Southern', 146.6890580550484]"
-kellogg,"['K', 'Kellogg Co.', 64.99485483031341]"
-keycorp,"['KEY', 'KeyCorp', 13.91760872412419]"
-keysight,"['KEYS', 'Keysight Technologies', 96.70275381337042]"
-kimberly clark,"['KMB', 'Kimberly-Clark', 138.50840532606927]"
-kimco,"['KIM', 'Kimco Realty', 14.00492747279181]"
-kinder morgan,"['KMI', 'Kinder Morgan', 16.905434795047928]"
-kla,"['KLAC', 'KLA Corporation', 168.99702934596849]"
-kohls,"['KSS', ""Kohl's Corp."", 27.82521746815115]"
-kraft,"['KHC', 'Kraft Heinz Co', 29.0427536342455]"
-kroger,"['KR', 'Kroger Co.', 31.126086939936098]"
-l brands,"['LB', 'L Brands Inc.', 16.684202836907428]"
-l 3 harris,"['LHX', 'L3Harris Technologies', 193.7096379597982]"
-labcorp,"['LH', 'Laboratory Corp. of America Holding', 166.03442017928413]"
-lam,"['LRCX', 'Lam Research', 285.5217401255732]"
-lamb weston,"['LW', 'Lamb Weston Holdings Inc', 70.67855069257212]"
-sands,"['LVS', 'Las Vegas Sands', 53.208478319472164]"
-leggett,"['LEG', 'Leggett & Platt', 36.30376824088719]"
-leidos,"['LDOS', 'Leidos Holdings', 98.65043496394503]"
-lennar,"['LEN', 'Lennar Corp.', 56.45536227848219]"
-lilly eli,"['LLY', 'Lilly (Eli) & Co.', 147.0609424425208]"
-lincoln,"['LNC', 'Lincoln National', 40.90442036891329]"
-linde,"['LIN', 'Linde plc', 198.0432605466981]"
-live nation,"['LYV', 'Live Nation Entertainment', 52.406014497729316]"
-lkq,"['LKQ', 'LKQ Corporation', 27.11398546937583]"
-lockheed martin,"['LMT', 'Lockheed Martin Corp.', 382.919274813887]"
-loews,"['L', 'Loews Corp.', 39.924855259881504]"
-lowe's,"['LOW', ""Lowe's Cos."", 114.16094169063845]"
-lyondell,"['LYB', 'LyondellBasell', 66.60717403024867]"
-m&t bank,"['MTB', 'M&T Bank Corp.', 124.17362345819888]"
-marathon,"['MRO', 'Marathon Oil Corp.', 7.252318852189658]"
-marathon ,"['MPC', 'Marathon Petroleum', 38.94420287920081]"
-market axess,"['MKTX', 'MarketAxess', 417.9708700871122]"
-marriott,"['MAR', ""Marriott Int'l."", 104.37615922568502]"
-marsh & mclennan,"['MMC', 'Marsh & McLennan', 104.33985524937727]"
-martin marietta,"['MLM', 'Martin Marietta Materials', 215.80782572428384]"
-masco,"['MAS', 'Masco Corp.', 44.118043305217356]"
-mastercard,"['MA', 'Mastercard Inc.', 290.71637681601703]"
-maxim,"['MXIM', 'Maxim Integrated Products Inc', 57.36413051771081]"
-mccormick,"['MKC', 'McCormick & Co.', 162.08326068822888]"
-mcdonalds,"['MCD', ""McDonald's Corp."", 189.73970927362856]"
-mckesson,"['MCK', 'McKesson Corp.', 145.6634060403575]"
-medtronic,"['MDT', 'Medtronic plc', 100.58181121383888]"
-merck,"['MRK', 'Merck & Co.', 80.39652191383252]"
-metlife,
-mettler toledo,"['MTD', 'Mettler Toledo', 751.9710140504699]"
-mgm,"['MGM', 'MGM Resorts International', 20.652536267819613]"
-microchip,"['MCHP', 'Microchip Technology', 93.43913028551185]"
-micron,"['MU', 'Micron Technology', 49.668550961259484]"
-microsoft,"['MSFT', 'Microsoft Corp.', 176.19521729842475]"
-mid america,
-mohawk,
-coors,
-mondelez,
-monster,"['MNST', 'Monster Beverage', 65.35072470402372]"
-moodys,"['MCO', ""Moody's Corp"", 251.89978325885275]"
-morgan stanley,
-motorola,"['MSI', 'Motorola Solutions Inc.', 152.5804346056952]"
-msci,"['MSCI', 'MSCI Inc', 308.279853489088]"
-mylan,"['MYL', 'Mylan N.V.', 17.58405798068945]"
-nasdaq,
-national oil,
-netapp,"['NTAP', 'NetApp', 47.00007250689078]"
-netflix,
-newell,"['NWL', 'Newell Brands', 15.487536271413168]"
-newmont,
-news corp,"['NWS', 'News Corp. Class B', 11.879492732061856]"
-nextera,
-nielsen ,
-nike,"['NKE', 'Nike Inc.', 93.07579709481502]"
-nisource,"['NI', 'NiSource Inc.', 25.639782601508543]"
-noble,
-norfolk southern,"['NSC', 'Norfolk Southern Corp.', 176.98087017778036]"
-northern trust,"['NTRS', 'Northern Trust Corp.', 84.92173916360606]"
-northrop grumman,
-lifelock,"['NLOK', 'NortonLifeLock', 20.861159400663514]"
-norwegian cruise line,"['NCLH', 'Norwegian Cruise Line Holdings', 26.511304233385168]"
-nrg,"['NRG', 'NRG Energy', 33.66876831607542]"
-nucor,"['NUE', 'Nucor Corp.', 42.361086997432984]"
-nvidia,
-nvr,
-oreilly,"['ORLY', ""O'Reilly Automotive"", 391.0909417193869]"
-occidental,"['OXY', 'Occidental Petroleum', 23.687971052916154]"
-old dominion,
-omnicom,
-oneok,"['OKE', 'ONEOK', 45.21760863152103]"
-oracle,"['ORCL', 'Oracle Corp.', 52.57615943576979]"
-otis ,"['OTIS', 'Otis Worldwide', 51.39239991131951]"
-paccar,
-packaging corporation,
-parker hannifin,"['PH', 'Parker-Hannifin', 172.40934758946514]"
-paychex,"['PAYX', 'Paychex Inc.', 74.49586945685787]"
-paycom,
-paypal,
-pentair,"['PNR', 'Pentair plc', 37.865000019902766]"
-peoples united,"['PBCT', ""People's United Financial"", 13.06188404387322]"
-pepsi,"['PEP', 'PepsiCo Inc.', 133.40326054890951]"
-perkin elmer,
-perrigo,
-pfizer,"['PFE', 'Pfizer Inc.', 35.80601437886556]"
-phillip morris,"['PM', 'Philip Morris International', 77.01956516763438]"
-phillips 66,"['PSX', 'Phillips 66', 75.28978239971659]"
-pinnacle west,"['PNW', 'Pinnacle West Capital', 82.62659432231516]"
-pioneer ,"['PXD', 'Pioneer Natural Resources', 102.87137692216514]"
-pnc,
-ppg,
-ppl,
-principal financial,"['PFG', 'Principal Financial Group', 41.93021738356438]"
-p and g,
-progressive,"['PGR', 'Progressive Corp.', 77.74391273830248]"
-prologis,"['PLD', 'Prologis', 88.80956539209338]"
-prudential,"['PRU', 'Prudential Financial', 68.43702894017316]"
-pseg,"['PEG', 'Public Service Enterprise Group (PSEG)', 51.87956514220307]"
-public storage,"['PSA', 'Public Storage', 202.63905809927678]"
-pulte,"['PHM', 'PulteGroup', 34.36833331895911]"
-pvh,"['PVH', 'PVH Corp.', 60.42036234814188]"
-qorvo,"['QRVO', 'Qorvo', 100.95491293202276]"
-qualcomm,"['QCOM', 'QUALCOMM Inc.', 82.09181171914805]"
-quanta,"['PWR', 'Quanta Services Inc.', 36.60369575887486]"
-quest,
-ralph lauren,"['RL', 'Ralph Lauren Corporation', 87.65528980199842]"
-raymond james,"['RJF', 'Raymond James Financial Inc.', 75.33637704711029]"
-raytheon,
-realty income,"['O', 'Realty Income Corporation', 63.06507251573645]"
-regency,"['REG', 'Regency Centers Corporation', 49.37753635904063]"
-regeneron,"['REGN', 'Regeneron Pharmaceuticals', 503.01014643130094]"
-regions,"['RF', 'Regions Financial Corp.', 12.167753592781398]"
-republic,
-resmed,"['RMD', 'ResMed', 163.99036169743192]"
-robert half,"['RHI', 'Robert Half International', 50.904492640840836]"
-rockwell,"['ROK', 'Rockwell Automation Inc.', 191.49043500596198]"
-rollins,"['ROL', 'Rollins Inc.', 39.09833330347918]"
-roper,"['ROP', 'Roper Technologies', 359.59282452127206]"
-ross stores,"['ROST', 'Ross Stores', 97.63449276357457]"
-royal caribbean,"['RCL', 'Royal Caribbean Cruises Ltd', 66.97492754286614]"
-s&p ,"['SPGI', 'S&P Global Inc.', 292.78318875077844]"
-salesforce,
-sba ,
-schlumberger,"['SLB', 'Schlumberger Ltd.', 22.833840598230775]"
-seagate,
-sealed air,
-sempra,"['SRE', 'Sempra Energy', 131.33775379346764]"
-servicenow,"['NOW', 'ServiceNow', 340.2526093635006]"
-sherwin williams,"['SHW', 'Sherwin-Williams', 545.3068852079087]"
-simon,
-skyworks,"['SWKS', 'Skyworks Solutions', 110.92507271144702]"
-sl green,
-snap on,"['SNA', 'Snap-on', 137.30883988090184]"
-southern company,"['SO', 'Southern Company', 58.858260666114695]"
-southwest,"['LUV', 'Southwest Airlines', 40.14224656422933]"
-black and decker,"['SWK', 'Stanley Black & Decker', 132.7505072441654]"
-starbucks,"['SBUX', 'Starbucks Corp.', 77.6724640943002]"
-state street,"['STT', 'State Street Corp.', 64.79311614105667]"
-steris,"['STE', 'STERIS plc', 151.16485507246378]"
-stryker,"['SYK', 'Stryker Corp.', 189.6460143379543]"
-svb,
-synchrony,
-synopsys,"['SNPS', 'Synopsys Inc.', 157.28478285195172]"
-sysco,"['SYY', 'Sysco Corp.', 60.40905792125757]"
-t mobile,"['TMUS', 'T-Mobile US', 91.52615920357083]"
-t rowe price,"['TROW', 'T. Rowe Price Group', 118.98840575287308]"
-take two,"['TTWO', 'Take-Two Interactive', 126.47920238107875]"
-tapestry,"['TPR', 'Tapestry Inc.', 18.31840578023938]"
-target,"['TGT', 'Target Corp.', 113.17637678505717]"
-te connectivity,
-technip ,
-teledyne,
-teleflex,"['TFX', 'Teleflex', 348.89492808908653]"
-texas instruments,"['TXN', 'Texas Instruments', 119.2973183894503]"
-textron,
-ny mellon,"['BK', 'The Bank of New York Mellon', 39.16971004873082]"
-clorox,"['CLX', 'The Clorox Company', 186.4571015731148]"
-cooper,"['COO', 'The Cooper Companies', 309.01282567563266]"
-hershey,"['HSY', 'The Hershey Company', 139.88181199889252]"
-mosaic,"['MOS', 'The Mosaic Company', 14.367101430892944]"
-travelers,"['TRV', 'The Travelers Companies Inc.', 114.77427535126175]"
-walt disney,"['DIS', 'The Walt Disney Company', 118.35840601160906]"
-thermo fisher,
-tiffany,"['TIF', 'Tiffany & Co.', 127.89717422706494]"
-tjx,"['TJX', 'TJX Companies Inc.', 53.7297826020614]"
-tractor supply,"['TSCO', 'Tractor Supply Company', 102.8028986281243]"
-trane,"['TT', 'Trane Technologies plc', 102.94731892019078]"
-transdigm,
-truist,"['TFC', 'Truist Financial', 41.15746383390565]"
-twitter,"['TWTR', 'Twitter Inc.', 31.492463761481687]"
-tyler,"['TYL', 'Tyler Technologies', 325.1598559393399]"
-tyson,"['TSN', 'Tyson Foods', 66.98355069367781]"
-us bancorp,"['USB', 'U.S. Bancorp', 41.43586942423945]"
-udr,
-ulta,"['ULTA', 'Ulta Beauty', 229.75884036741394]"
-under armour,"['UA', 'Under Armour (Class C)', 11.194492730541505]"
-union pacific,"['UNP', 'Union Pacific Corp', 163.54123162532198]"
-united airlines,"['UAL', 'United Airlines Holdings', 46.96739144256149]"
-united health,
-united parcel,"['UPS', 'United Parcel Service', 102.96384070576102]"
-united rental,"['URI', 'United Rentals Inc.', 131.78594268577686]"
-universal health,"['UHS', 'Universal Health Services', 111.67021743110989]"
-unum,"['UNM', 'Unum Group', 19.652826136437014]"
-valero,"['VLO', 'Valero Energy', 65.35181178217348]"
-varian,"['VAR', 'Varian Medical Systems', 123.8269563757855]"
-ventas,"['VTR', 'Ventas Inc', 40.96434788081957]"
-verisign,"['VRSN', 'Verisign Inc.', 202.2032608916794]"
-verisk,"['VRSK', 'Verisk Analytics', 158.57202839505845]"
-verizon ,
-vertex,"['VRTX', 'Vertex Pharmaceuticals Inc', 254.14239092840666]"
-vf ,"['VFC', 'VF Corporation', 67.47079716558042]"
-viacom,
-visa,"['V', 'Visa Inc.', 186.25891312308934]"
-vornado,"['VNO', 'Vornado Realty Trust', 46.952536154484406]"
-vulcan,"['VMC', 'Vulcan Materials', 118.9854347118433]"
-wr berkley,
-wabtec,"['WAB', 'Wabtec Corporation', 62.38528975887575]"
-walgreens,"['WBA', 'Walgreens Boots Alliance', 46.10710152335789]"
-walmart,"['WMT', 'Walmart', 119.98702914472939]"
-waste management,
-waters,"['WAT', 'Waters Corporation', 199.61347817683566]"
-wec,
-wells fargo,"['WFC', 'Wells Fargo', 34.11471010291058]"
-welltower,
-west pharma,"['WST', 'West Pharmaceutical Services', 180.41847815029863]"
-western digital,"['WDC', 'Western Digital', 50.052391301030696]"
-western union,
-west rock,"['WRK', 'WestRock', 31.859782688859582]"
-weyerhauser,"['WY', 'Weyerhaeuser', 23.28478263080984]"
-whirlpool,"['WHR', 'Whirlpool Corp.', 124.1458696006001]"
-williams,
-willis towers,
-wynn ,
-xcel,"['XEL', 'Xcel Energy Inc', 64.02101461438166]"
-xerox,
-xilinix,"['XLNX', 'Xilinx', 88.70949305658755]"
-xylem,"['XYL', 'Xylem Inc.', 71.87478272811227]"
-yum,"['YUM', 'Yum! Brands Inc', 89.22050744208737]"
-zebra,"['ZBRA', 'Zebra Technologies', 232.3652893287548]"
-zimmer,"['ZBH', 'Zimmer Biomet Holdings', 126.57652155558269]"
-zions,"['ZION', 'Zions Bancorp', 36.1004348008529]"
-zoetis,"['ZTS', 'Zoetis', 131.75130390775377]"
+short_name,ticker,long_name,average_price
+3m,['MMM', '3M Company', 154.51514539856842]
+ao smith,['AOS', 'A.O. Smith Corp', 43.62159427698108]
+abbott,['ABT', 'Abbott Laboratories', 87.58847814366437]
+abbvie,['ABBV', 'AbbVie Inc.', 87.7566667639691]
+abiomed,['ABMD', 'ABIOMED Inc', 190.59239075149316]
+accenture,['ACN', 'Accenture plc', 193.2668834078139]
+blizzard,['ATVI', 'Activision Blizzard', 65.8007971169292]
+adobe,['ADBE', 'Adobe Inc.', 363.8784062482309]
+advanced auto,['AAP', 'Advance Auto Parts', 129.61970995474553]
+AMD,['AMD', 'Advanced Micro Devices Inc', 50.957608596138336]
+AES,['AES', 'AES Corp', 15.447898484658504]
+aflac,['AFL', 'AFLAC Inc', 40.4483333947002]
+agilient,['A', 'Agilent Technologies Inc', 81.93456536445065]
+air products ,['APD', 'Air Products & Chemicals Inc', 231.63434777743575]
+akamai,['AKAM', 'Akamai Technologies Inc', 97.94398537234983]
+alaska air,['ALK', 'Alaska Air Group Inc', 43.02920288970505]
+albemarle,['ALB', 'Albemarle Corp', 72.92978270157523]
+alexandria,['ARE', 'Alexandria Real Estate Equities', 155.42079759680706]
+alexion,['ALXN', 'Alexion Pharmaceuticals', 102.91963748655458]
+align,['ALGN', 'Align Technology', 236.92202836188716]
+allegion,['ALLE', 'Allegion', 108.49949275583461]
+alliant,['LNT', 'Alliant Energy Corp', 51.45362323263417]
+allstate,['ALL', 'Allstate Corp', 102.32507241290548]
+google ,['GOOG', 'Alphabet Inc. (Class C)', 1364.40356622226]
+altria,['MO', 'Altria Group Inc', 41.53181145156639]
+amazon,['AMZN', 'Amazon.com Inc.', 2253.527975331182]
+amcor,['AMCR', 'Amcor plc', 9.547681113947993]
+ameren,['AEE', 'Ameren Corp', 75.68188393634298]
+americal airlines,['AAL', 'American Airlines Group', 17.067753639774047]
+americal electric,['AEP', 'American Electric Power', 87.62811599952587]
+american express,['AXP', 'American Express Co', 103.381521805473]
+american international,['AIG', 'American International Group', 35.08942024949668]
+american tower,['AMT', 'American Tower Corp.', 241.81036222153816]
+american water works,['AWK', 'American Water Works Company Inc', 127.21434772878453]
+ameriprise financial,['AMP', 'Ameriprise Financial', 139.24615909742272]
+amerisource,['ABC', 'AmerisourceBergen Corp', 90.85615943134695]
+ametek,['AME', 'AMETEK Inc.', 87.25470999012823]
+amgen,['AMGN', 'Amgen Inc.', 225.6450719418733]
+amphenol,['APH', 'Amphenol Corp', 92.7568842569987]
+analog devices,['ADI', 'Analog Devices Inc.', 110.60253651936848]
+ansys,['ANSS', 'ANSYS', 265.04166788294697]
+anthem,['ANTM', 'Anthem', 269.0977533312811]
+aon,['AON', 'Aon plc', 195.62637627643088]
+apache,['APA', 'Apache Corporation', 16.54195649727531]
+apartment investment,['AIV', 'Apartment Investment & Management', 42.18565229056538]
+apple,['AAPL', 'Apple Inc.', 308.59108756245047]
+applied materials,['AMAT', 'Applied Materials Inc.', 56.332608761994734]
+aptiv,['APTV', 'Aptiv PLC', 74.16478273142938]
+archer,['ADM', 'Archer-Daniels-Midland Co', 39.23826089112655]
+arista,['ANET', 'Arista Networks', 211.88202877321106]
+AJG,['AJG', 'Arthur J. Gallagher & Co.', 92.70492774852808]
+assurant,['AIZ', 'Assurant', 112.36268084982167]
+at&t,['T', 'AT&T Inc.', 32.854420330213465]
+atmos,['ATO', 'Atmos Energy', 104.91753592007402]
+autodesk,['ADSK', 'Autodesk Inc.', 194.27811641969544]
+ADP ,['ADP', 'Automatic Data Processing', 151.57847843999448]
+autozone,['AZO', 'AutoZone Inc', 1054.8129674939141]
+avalon bay,['AVB', 'AvalonBay Communities', 177.61847863681075]
+avery dennison,['AVY', 'Avery Dennison Corp', 116.07362332551375]
+baker hughes,['BKR', 'Baker Hughes Co', 16.605217408442844]
+ball ,['BLL', 'Ball Corp', 68.95528978541277]
+bank of america,['BAC', 'Bank of America Corp', 26.509420201398324]
+baxter,['BAX', 'Baxter International Inc.', 86.55036240729733]
+becton,['BDX', 'Becton Dickinson', 250.4342025535694]
+berkshire hathaway,,,
+best buy,['BBY', 'Best Buy Co. Inc.', 78.41188375500666]
+bio rad,['BIO', 'Bio-Rad Laboratories', 410.9134782431782]
+bio gen,['BIIB', 'Biogen Inc.', 299.1562323086504]
+blackrock,['BLK', 'BlackRock', 504.0477540389351]
+boeing,['BA', 'Boeing Company', 211.55007287730342]
+booking,['BKNG', 'Booking Holdings Inc', 1645.014422872792]
+borg warner,['BWA', 'BorgWarner', 31.845289783201356]
+boston properties,['BXP', 'Boston Properties', 108.05971018473308]
+boston scientific,['BSX', 'Boston Scientific', 37.36268102949944]
+bristol myers,['BMY', 'Bristol-Myers Squibb', 60.32369536247806]
+broadcom,['AVGO', 'Broadcom Inc.', 284.2400727202927]
+broadridge,['BR', 'Broadridge Financial Solutions', 116.0102901182313]
+brown-forman,,,
+ch robinson,['CHRW', 'C. H. Robinson Worldwide', 74.37543476491734]
+cabot,['COG', 'Cabot Oil & Gas', 17.608840603759322]
+cadence,['CDNS', 'Cadence Design Systems', 78.46181172909944]
+campbell,['CPB', 'Campbell Soup', 48.91623184646385]
+capital one,['COF', 'Capital One Financial', 74.0305795531342]
+cardinal,['CAH', 'Cardinal Health Inc.', 51.69210143711256]
+carmax,['KMX', 'Carmax Inc', 82.27956534123075]
+carnival,['CCL', 'Carnival Corp.', 24.494347758915115]
+carrier,['CARR', 'Carrier Global', 18.752941053053913]
+caterpillar,['CAT', 'Caterpillar Inc.', 123.8700724615567]
+cboe,['CBOE', 'Cboe Global Markets', 104.10405758843906]
+cbre,['CBRE', 'CBRE Group', 48.753188547880754]
+cdw,['CDW', 'CDW', 115.307101595229]
+celanese,['CE', 'Celanese', 90.97782591114874]
+centene,['CNC', 'Centene Corporation', 63.05884026790011]
+centerpoint,['CNP', 'CenterPoint Energy', 20.063260900801506]
+century link,['CTL', 'CenturyLink Inc', 11.105797062749447]
+cerner,['CERN', 'Cerner', 69.8978986049044]
+cf industries,['CF', 'CF Industries Holdings Inc', 32.530579622241035]
+schwab,['SCHW', 'Charles Schwab Corporation', 38.450144919796266]
+charter,['CHTR', 'Charter Communications', 501.0577540743178]
+chevron,['CVX', 'Chevron Corp.', 93.6392029195592]
+chipotle,['CMG', 'Chipotle Mexican Grill', 882.0815956005151]
+chubb,['CB', 'Chubb Limited', 129.51492762911147]
+church and dwight,['CHD', 'Church & Dwight', 72.59891308217809]
+cigna,['CI', 'CIGNA Corp.', 190.85333384638247]
+cincinnati,['CINF', 'Cincinnati Financial', 81.65760880622311]
+cintas,['CTAS', 'Cintas Corporation', 247.9482619796974]
+cisco,['CSCO', 'Cisco Systems', 44.071956579236016]
+citigroup,['C', 'Citigroup Inc.', 56.82391313193501]
+citizens financial,['CFG', 'Citizens Financial Group', 27.417681272479072]
+citrix,['CTXS', 'Citrix Systems', 133.1410870206529]
+cme,['CME', 'CME Group Inc.', 186.97862321051997]
+cms,['CMS', 'CMS Energy', 60.743985549263336]
+coca cola,['KO', 'Coca-Cola Company', 49.667753661888234]
+cognizant,['CTSH', 'Cognizant Technology Solutions', 56.652753470600516]
+colgate,['CL', 'Colgate-Palmolive', 71.01731869794321]
+comcast,['CMCSA', 'Comcast Corp.', 40.08804348931796]
+comerica,['CMA', 'Comerica Inc.', 43.88760872163634]
+conagra,['CAG', 'Conagra Brands', 32.12268134130948]
+concho,['CXO', 'Concho Resources', 61.43876797219981]
+phillips,['COP', 'ConocoPhillips', 45.30333331011344]
+edison,['EIX'," ""Edison Int'l""", 62.753405805947125]
+constellation,['STZ', 'Constellation Brands', 172.5850721165754]
+copart,['CPRT', 'Copart Inc', 84.50710175002831]
+corning,['GLW', 'Corning Inc.', 24.599710201871567]
+corteva,['CTVA', 'Corteva', 26.782101479129516]
+costco,['COST', 'Costco Wholesale Corp.', 305.0340582806131]
+coty,['COTY', 'Coty Inc', 6.905869528867196]
+crown castle,['CCI', 'Crown Castle International Corp.', 156.3117392719656]
+csx,['CSX', 'CSX Corp.', 68.25992777727652]
+cummins,['CMI', 'Cummins Inc.', 159.6488409180572]
+cvs,['CVS', 'CVS Health', 64.80579718990603]
+d r horton,['DHI', 'D. R. Horton', 50.99065230549245]
+danaher,['DHR', 'Danaher Corp.', 159.3628981769949]
+darden,['DRI', 'Darden Restaurants', 83.51869591422702]
+davita,['DVA', 'DaVita Inc.', 78.5799275273862]
+deere,['DE', 'Deere & Co.', 152.7377533290697]
+delta,['DAL', 'Delta Air Lines Inc.', 36.71818858989771]
+sirona,['XRAY', 'Dentsply Sirona', 46.32768130647963]
+devon,['DVN', 'Devon Energy', 14.414420297180397]
+dexcom,['DXCM', 'DexCom', 313.92557901575947]
+diamondback,['FANG', 'Diamondback Energy', 51.030000002487846]
+realty trust,['DLR', 'Digital Realty Trust Inc', 135.3418846130371]
+discover,['DFS', 'Discover Financial Services', 54.69246388863826]
+discovery,['DISCK', 'Discovery Inc. (Class C)', 22.345217455988344]
+dish,['DISH', 'Dish Network', 30.386159371638644]
+dollar general,['DG', 'Dollar General', 169.47166630841684]
+dollar tree,['DLTR', 'Dollar Tree', 85.13659457883973]
+dominion,['D', 'Dominion Energy', 80.42137693322223]
+dominos,['DPZ'," ""Domino's Pizza""", 343.4140585194463]
+dover,['DOV', 'Dover Corporation', 99.15478250254755]
+dow,['DOW', 'Dow Inc.', 39.87757257102192]
+dte,['DTE', 'DTE Energy Co.', 111.3598550990008]
+duke,['DRE', 'Duke Realty Corp', 34.32028977767281]
+dupont,['DD', 'DuPont de Nemours Inc', 48.234275403230086]
+dxc,['DXC', 'DXC Technology', 20.796159523120824]
+etrade,['ETFC', 'E*Trade', 43.466231608736344]
+eastman,['EMN', 'Eastman Chemical', 64.40731888923092]
+eaton,['ETN', 'Eaton Corporation', 87.16449278679447]
+ebay,['EBAY', 'eBay Inc.', 40.21949273261471]
+ecolab,['ECL', 'Ecolab Inc.', 191.91376838131228]
+edwards,['EW', 'Edwards Lifesciences', 71.51376820992732]
+ea,['EA', 'Electronic Arts', 113.87797076460244]
+emerson,['EMR', 'Emerson Electric Company', 61.378116054811336]
+entergy,['ETR', 'Entergy Corp.', 106.87760892121688]
+eog,['EOG', 'EOG Resources', 55.953043384828426]
+equifax,['EFX', 'Equifax Inc.', 148.36557996445808]
+equinix,['EQIX', 'Equinix', 644.3660848866339]
+equity,['EQR', 'Equity Residential', 68.60811584583227]
+essex,['ESS', 'Essex Property Trust Inc.', 260.3630428590636]
+estee lauder,['EL', 'Estée Lauder Companies', 186.23804330134737]
+everest,['RE', 'Everest Re Group Ltd.', 223.4171728604082]
+evergy,['EVRG', 'Evergy', 62.33855067819789]
+eversource,['ES', 'Eversource Energy', 85.23528980863267]
+exelon,['EXC', 'Exelon Corp.', 40.35985497460849]
+expedia,['EXPE', 'Expedia Group', 84.6060145834218]
+expeditors,['EXPD', 'Expeditors', 72.61463748544887]
+extra space,['EXR', 'Extra Space Storage', 98.29782613118489]
+exxon,['XOM', 'Exxon Mobil Corp.', 49.612101375192836]
+f5,['FFIV', 'F5 Networks', 129.7746378580729]
+facebook,['FB', 'Facebook Inc.', 205.44797095699587]
+fastenal,['FAST', 'Fastenal Co', 37.296666725822114]
+frt,['FRT', 'Federal Realty Investment Trust', 96.56594218378481]
+fedex,['FDX', 'FedEx Corporation', 135.7978987210039]
+fidelity,['FIS', 'Fidelity National Information Services', 135.2379710432412]
+fifth third,['FITB', 'Fifth Third Bancorp', 21.485579684160758]
+first republic,['FRC', 'First Republic Bank', 104.47413038170856]
+first energy,['FE', 'FirstEnergy Corp', 43.565797087075055]
+fiserv,['FISV', 'Fiserv Inc', 105.14036244931428]
+fleetcor,['FLT', 'FleetCor Technologies Inc', 256.56514529905456]
+flir,['FLIR', 'FLIR Systems', 44.05376832381539]
+flowserve,['FLS', 'Flowserve Corporation', 33.10021745985833]
+fmc,['FMC', 'FMC Corporation', 93.45188395182292]
+ford,['F', 'Ford Motor Company', 6.522246388421542]
+fortinet,['FTNT', 'Fortinet', 118.25869596177253]
+fortive,['FTV', 'Fortive Corp', 65.86492765122566]
+fortune brands,['FBHS', 'Fortune Brands Home & Security', 58.79898555036904]
+fox,['FOX', 'Fox Corporation (Class B)', 29.137681062670723]
+franklin,['BEN', 'Franklin Resources', 20.932391291079313]
+freeport,['FCX', 'Freeport-McMoRan Inc.', 10.098913033803305]
+gap,['GPS', 'Gap Inc.', 11.980797152588332]
+garmin,['GRMN', 'Garmin Ltd.', 88.96311602385148]
+gartner,['IT', 'Gartner Inc', 125.85760840816775]
+general dynamics,['GD', 'General Dynamics', 153.0066667639691]
+general electric,['GE', 'General Electric', 8.582173889961796]
+general mills,['GIS', 'General Mills', 57.06000012936799]
+general motors,['GM', 'General Motors', 27.321014542510543]
+genuine parts,['GPC', 'Genuine Parts', 84.297898499862]
+gilead,['GILD', 'Gilead Sciences', 73.42384059187295]
+global payments,['GPN', 'Global Payments Inc.', 173.9242032368978]
+globe life,['GL', 'Globe Life Inc.', 84.0281885119452]
+goldman ,['GS', 'Goldman Sachs Group', 200.4546379421068]
+grainger,['GWW', 'Grainger (W.W.) Inc.', 294.88420237665594]
+h and r,['HRB', 'H&R Block', 18.01913043035977]
+halliburton,['HAL', 'Halliburton Co.', 14.01775362180627]
+hanes,['HBI', 'Hanesbrands Inc', 11.444927509280218]
+hartford,['HIG', 'Hartford Financial Svc.Gp.', 44.54304335773855]
+hasbro,['HAS', 'Hasbro Inc.', 79.21659403261931]
+hca,['HCA', 'HCA Healthcare', 115.34550724858823]
+healthpeak,['PEAK', 'Healthpeak Properties', 28.870652129684668]
+henry schein,['HSIC', 'Henry Schein', 59.75644968558049]
+hess,['HES', 'Hess Corporation', 49.838043516960695]
+hp,['HPQ', 'HP Inc.', 17.9655072654503]
+hilton,['HLT', 'Hilton Worldwide Holdings Inc', 85.0274637747502]
+holly frontier,['HFC', 'HollyFrontier Corp', 33.0631159492161]
+hologic,['HOLX', 'Hologic', 49.30579721754876]
+home depot,['HD', 'Home Depot', 226.44000078284222]
+honeywell,['HON'," ""Honeywell Int'l Inc.""", 151.58913040161133]
+hormel,['HRL', 'Hormel Foods Corp.', 46.69855081862298]
+host hotels,['HST', 'Host Hotels & Resorts', 13.115507312442945]
+howmet,['HWM', 'Howmet Aerospace', 17.195670157363736]
+humana,['HUM', 'Humana Inc.', 358.89717367421025]
+huntington bancshares,['HBAN', 'Huntington Bancshares', 10.42094201626985]
+huntington ingalls,['HII', 'Huntington Ingalls Industries', 206.22202887051347]
+idex,['IEX', 'IDEX Corporation', 155.28608675970548]
+idexx,['IDXX', 'IDEXX Laboratories', 280.54492707183397]
+ihs,['INFO', 'IHS Markit Ltd.', 70.58231876207435]
+illinois tool,['ITW', 'Illinois Tool Works', 167.3221012060193]
+illumina,['ILMN', 'Illumina Inc', 314.67311494246775]
+incyte,['INCY', 'Incyte', 87.56992754728898]
+ingersoll rand,['IR', 'Ingersoll Rand', 29.894565209098484]
+intel,['INTC', 'Intel Corp.', 59.36144942131595]
+intercontinental exchange,['ICE', 'Intercontinental Exchange', 91.24644929084225]
+ibm,['IBM', 'International Business Machines', 126.22869563448256]
+iff,['IFF', 'International Flavors & Fragrances', 125.4979709127675]
+ip,['IP', 'International Paper', 36.2887680772422]
+ipg,['IPGP', 'IPG Photonics Corp.', 138.96811598625737]
+intuit,['INTU', 'Intuit Inc.', 274.8203623674918]
+intuitive surgical,['ISRG', 'Intuitive Surgical Inc.', 547.2642026154891]
+invesco,['IVZ', 'Invesco Ltd.', 11.931231868439827]
+iqvia,['IQV', 'IQVIA Holdings Inc.', 139.89601511195087]
+iron mountain,['IRM', 'Iron Mountain Incorporated', 27.69123183817103]
+j b hunt,['JBHT', 'J. B. Hunt Transport Services', 107.66840561576511]
+jack henry,['JKHY', 'Jack Henry & Associates', 166.13101384259653]
+jacobs,['J', 'Jacobs Engineering Group', 85.69536214634992]
+jm smucker,['SJM', 'JM Smucker', 109.14862320388573]
+jnj,['JNJ', 'Johnson & Johnson', 143.83304363748303]
+johnson controls,['JCI', 'Johnson Controls International', 34.09217388042505]
+chase,['JPM', 'JPMorgan Chase & Co.', 107.09086979299352]
+juniper,['JNPR', 'Juniper Networks', 22.71644932290782]
+kansas city,['KSU', 'Kansas City Southern', 146.6890580550484]
+kellogg,['K', 'Kellogg Co.', 64.99485483031341]
+keycorp,['KEY', 'KeyCorp', 13.91760872412419]
+keysight,['KEYS', 'Keysight Technologies', 96.70275381337042]
+kimberly clark,['KMB', 'Kimberly-Clark', 138.50840532606927]
+kimco,['KIM', 'Kimco Realty', 14.00492747279181]
+kinder morgan,['KMI', 'Kinder Morgan', 16.905434795047928]
+kla,['KLAC', 'KLA Corporation', 168.99702934596849]
+kohls,['KSS'," ""Kohl's Corp.""", 27.82521746815115]
+kraft,['KHC', 'Kraft Heinz Co', 29.0427536342455]
+kroger,['KR', 'Kroger Co.', 31.126086939936098]
+l brands,['LB', 'L Brands Inc.', 16.684202836907428]
+l 3 harris,['LHX', 'L3Harris Technologies', 193.7096379597982]
+labcorp,['LH', 'Laboratory Corp. of America Holding', 166.03442017928413]
+lam,['LRCX', 'Lam Research', 285.5217401255732]
+lamb weston,['LW', 'Lamb Weston Holdings Inc', 70.67855069257212]
+sands,['LVS', 'Las Vegas Sands', 53.208478319472164]
+leggett,['LEG', 'Leggett & Platt', 36.30376824088719]
+leidos,['LDOS', 'Leidos Holdings', 98.65043496394503]
+lennar,['LEN', 'Lennar Corp.', 56.45536227848219]
+lilly eli,['LLY', 'Lilly (Eli) & Co.', 147.0609424425208]
+lincoln,['LNC', 'Lincoln National', 40.90442036891329]
+linde,['LIN', 'Linde plc', 198.0432605466981]
+live nation,['LYV', 'Live Nation Entertainment', 52.406014497729316]
+lkq,['LKQ', 'LKQ Corporation', 27.11398546937583]
+lockheed martin,['LMT', 'Lockheed Martin Corp.', 382.919274813887]
+loews,['L', 'Loews Corp.', 39.924855259881504]
+lowe's,['LOW'," ""Lowe's Cos.""", 114.16094169063845]
+lyondell,['LYB', 'LyondellBasell', 66.60717403024867]
+m&t bank,['MTB', 'M&T Bank Corp.', 124.17362345819888]
+marathon,['MRO', 'Marathon Oil Corp.', 7.252318852189658]
+marathon ,['MPC', 'Marathon Petroleum', 38.94420287920081]
+market axess,['MKTX', 'MarketAxess', 417.9708700871122]
+marriott,['MAR'," ""Marriott Int'l.""", 104.37615922568502]
+marsh & mclennan,['MMC', 'Marsh & McLennan', 104.33985524937727]
+martin marietta,['MLM', 'Martin Marietta Materials', 215.80782572428384]
+masco,['MAS', 'Masco Corp.', 44.118043305217356]
+mastercard,['MA', 'Mastercard Inc.', 290.71637681601703]
+maxim,['MXIM', 'Maxim Integrated Products Inc', 57.36413051771081]
+mccormick,['MKC', 'McCormick & Co.', 162.08326068822888]
+mcdonalds,['MCD'," ""McDonald's Corp.""", 189.73970927362856]
+mckesson,['MCK', 'McKesson Corp.', 145.6634060403575]
+medtronic,['MDT', 'Medtronic plc', 100.58181121383888]
+merck,['MRK', 'Merck & Co.', 80.39652191383252]
+metlife,,,
+mettler toledo,['MTD', 'Mettler Toledo', 751.9710140504699]
+mgm,['MGM', 'MGM Resorts International', 20.652536267819613]
+microchip,['MCHP', 'Microchip Technology', 93.43913028551185]
+micron,['MU', 'Micron Technology', 49.668550961259484]
+microsoft,['MSFT', 'Microsoft Corp.', 176.19521729842475]
+mid america,,,
+mohawk,,,
+coors,,,
+mondelez,,,
+monster,['MNST', 'Monster Beverage', 65.35072470402372]
+moodys,['MCO'," ""Moody's Corp""", 251.89978325885275]
+morgan stanley,,,
+motorola,['MSI', 'Motorola Solutions Inc.', 152.5804346056952]
+msci,['MSCI', 'MSCI Inc', 308.279853489088]
+mylan,['MYL', 'Mylan N.V.', 17.58405798068945]
+nasdaq,,,
+national oil,,,
+netapp,['NTAP', 'NetApp', 47.00007250689078]
+netflix,,,
+newell,['NWL', 'Newell Brands', 15.487536271413168]
+newmont,,,
+news corp,['NWS', 'News Corp. Class B', 11.879492732061856]
+nextera,,,
+nielsen ,,,
+nike,['NKE', 'Nike Inc.', 93.07579709481502]
+nisource,['NI', 'NiSource Inc.', 25.639782601508543]
+noble,,,
+norfolk southern,['NSC', 'Norfolk Southern Corp.', 176.98087017778036]
+northern trust,['NTRS', 'Northern Trust Corp.', 84.92173916360606]
+northrop grumman,,,
+lifelock,['NLOK', 'NortonLifeLock', 20.861159400663514]
+norwegian cruise line,['NCLH', 'Norwegian Cruise Line Holdings', 26.511304233385168]
+nrg,['NRG', 'NRG Energy', 33.66876831607542]
+nucor,['NUE', 'Nucor Corp.', 42.361086997432984]
+nvidia,,,
+nvr,,,
+oreilly,['ORLY'," ""O'Reilly Automotive""", 391.0909417193869]
+occidental,['OXY', 'Occidental Petroleum', 23.687971052916154]
+old dominion,,,
+omnicom,,,
+oneok,['OKE', 'ONEOK', 45.21760863152103]
+oracle,['ORCL', 'Oracle Corp.', 52.57615943576979]
+otis ,['OTIS', 'Otis Worldwide', 51.39239991131951]
+paccar,,,
+packaging corporation,,,
+parker hannifin,['PH', 'Parker-Hannifin', 172.40934758946514]
+paychex,['PAYX', 'Paychex Inc.', 74.49586945685787]
+paycom,,,
+paypal,,,
+pentair,['PNR', 'Pentair plc', 37.865000019902766]
+peoples united,['PBCT'," ""People's United Financial""", 13.06188404387322]
+pepsi,['PEP', 'PepsiCo Inc.', 133.40326054890951]
+perkin elmer,,,
+perrigo,,,
+pfizer,['PFE', 'Pfizer Inc.', 35.80601437886556]
+phillip morris,['PM', 'Philip Morris International', 77.01956516763438]
+phillips 66,['PSX', 'Phillips 66', 75.28978239971659]
+pinnacle west,['PNW', 'Pinnacle West Capital', 82.62659432231516]
+pioneer ,['PXD', 'Pioneer Natural Resources', 102.87137692216514]
+pnc,,,
+ppg,,,
+ppl,,,
+principal financial,['PFG', 'Principal Financial Group', 41.93021738356438]
+p and g,,,
+progressive,['PGR', 'Progressive Corp.', 77.74391273830248]
+prologis,['PLD', 'Prologis', 88.80956539209338]
+prudential,['PRU', 'Prudential Financial', 68.43702894017316]
+pseg,['PEG', 'Public Service Enterprise Group (PSEG)', 51.87956514220307]
+public storage,['PSA', 'Public Storage', 202.63905809927678]
+pulte,['PHM', 'PulteGroup', 34.36833331895911]
+pvh,['PVH', 'PVH Corp.', 60.42036234814188]
+qorvo,['QRVO', 'Qorvo', 100.95491293202276]
+qualcomm,['QCOM', 'QUALCOMM Inc.', 82.09181171914805]
+quanta,['PWR', 'Quanta Services Inc.', 36.60369575887486]
+quest,,,
+ralph lauren,['RL', 'Ralph Lauren Corporation', 87.65528980199842]
+raymond james,['RJF', 'Raymond James Financial Inc.', 75.33637704711029]
+raytheon,,,
+realty income,['O', 'Realty Income Corporation', 63.06507251573645]
+regency,['REG', 'Regency Centers Corporation', 49.37753635904063]
+regeneron,['REGN', 'Regeneron Pharmaceuticals', 503.01014643130094]
+regions,['RF', 'Regions Financial Corp.', 12.167753592781398]
+republic,,,
+resmed,['RMD', 'ResMed', 163.99036169743192]
+robert half,['RHI', 'Robert Half International', 50.904492640840836]
+rockwell,['ROK', 'Rockwell Automation Inc.', 191.49043500596198]
+rollins,['ROL', 'Rollins Inc.', 39.09833330347918]
+roper,['ROP', 'Roper Technologies', 359.59282452127206]
+ross stores,['ROST', 'Ross Stores', 97.63449276357457]
+royal caribbean,['RCL', 'Royal Caribbean Cruises Ltd', 66.97492754286614]
+s&p ,['SPGI', 'S&P Global Inc.', 292.78318875077844]
+salesforce,,,
+sba ,,,
+schlumberger,['SLB', 'Schlumberger Ltd.', 22.833840598230775]
+seagate,,,
+sealed air,,,
+sempra,['SRE', 'Sempra Energy', 131.33775379346764]
+servicenow,['NOW', 'ServiceNow', 340.2526093635006]
+sherwin williams,['SHW', 'Sherwin-Williams', 545.3068852079087]
+simon,,,
+skyworks,['SWKS', 'Skyworks Solutions', 110.92507271144702]
+sl green,,,
+snap on,['SNA', 'Snap-on', 137.30883988090184]
+southern company,['SO', 'Southern Company', 58.858260666114695]
+southwest,['LUV', 'Southwest Airlines', 40.14224656422933]
+black and decker,['SWK', 'Stanley Black & Decker', 132.7505072441654]
+starbucks,['SBUX', 'Starbucks Corp.', 77.6724640943002]
+state street,['STT', 'State Street Corp.', 64.79311614105667]
+steris,['STE', 'STERIS plc', 151.16485507246378]
+stryker,['SYK', 'Stryker Corp.', 189.6460143379543]
+svb,,,
+synchrony,,,
+synopsys,['SNPS', 'Synopsys Inc.', 157.28478285195172]
+sysco,['SYY', 'Sysco Corp.', 60.40905792125757]
+t mobile,['TMUS', 'T-Mobile US', 91.52615920357083]
+t rowe price,['TROW', 'T. Rowe Price Group', 118.98840575287308]
+take two,['TTWO', 'Take-Two Interactive', 126.47920238107875]
+tapestry,['TPR', 'Tapestry Inc.', 18.31840578023938]
+target,['TGT', 'Target Corp.', 113.17637678505717]
+te connectivity,,,
+technip ,,,
+teledyne,,,
+teleflex,['TFX', 'Teleflex', 348.89492808908653]
+texas instruments,['TXN', 'Texas Instruments', 119.2973183894503]
+textron,,,
+ny mellon,['BK', 'The Bank of New York Mellon', 39.16971004873082]
+clorox,['CLX', 'The Clorox Company', 186.4571015731148]
+cooper,['COO', 'The Cooper Companies', 309.01282567563266]
+hershey,['HSY', 'The Hershey Company', 139.88181199889252]
+mosaic,['MOS', 'The Mosaic Company', 14.367101430892944]
+travelers,['TRV', 'The Travelers Companies Inc.', 114.77427535126175]
+walt disney,['DIS', 'The Walt Disney Company', 118.35840601160906]
+thermo fisher,,,
+tiffany,['TIF', 'Tiffany & Co.', 127.89717422706494]
+tjx,['TJX', 'TJX Companies Inc.', 53.7297826020614]
+tractor supply,['TSCO', 'Tractor Supply Company', 102.8028986281243]
+trane,['TT', 'Trane Technologies plc', 102.94731892019078]
+transdigm,,,
+truist,['TFC', 'Truist Financial', 41.15746383390565]
+twitter,['TWTR', 'Twitter Inc.', 31.492463761481687]
+tyler,['TYL', 'Tyler Technologies', 325.1598559393399]
+tyson,['TSN', 'Tyson Foods', 66.98355069367781]
+us bancorp,['USB', 'U.S. Bancorp', 41.43586942423945]
+udr,,,
+ulta,['ULTA', 'Ulta Beauty', 229.75884036741394]
+under armour,['UA', 'Under Armour (Class C)', 11.194492730541505]
+union pacific,['UNP', 'Union Pacific Corp', 163.54123162532198]
+united airlines,['UAL', 'United Airlines Holdings', 46.96739144256149]
+united health,,,
+united parcel,['UPS', 'United Parcel Service', 102.96384070576102]
+united rental,['URI', 'United Rentals Inc.', 131.78594268577686]
+universal health,['UHS', 'Universal Health Services', 111.67021743110989]
+unum,['UNM', 'Unum Group', 19.652826136437014]
+valero,['VLO', 'Valero Energy', 65.35181178217348]
+varian,['VAR', 'Varian Medical Systems', 123.8269563757855]
+ventas,['VTR', 'Ventas Inc', 40.96434788081957]
+verisign,['VRSN', 'Verisign Inc.', 202.2032608916794]
+verisk,['VRSK', 'Verisk Analytics', 158.57202839505845]
+verizon ,,,
+vertex,['VRTX', 'Vertex Pharmaceuticals Inc', 254.14239092840666]
+vf ,['VFC', 'VF Corporation', 67.47079716558042]
+viacom,,,
+visa,['V', 'Visa Inc.', 186.25891312308934]
+vornado,['VNO', 'Vornado Realty Trust', 46.952536154484406]
+vulcan,['VMC', 'Vulcan Materials', 118.9854347118433]
+wr berkley,,,
+wabtec,['WAB', 'Wabtec Corporation', 62.38528975887575]
+walgreens,['WBA', 'Walgreens Boots Alliance', 46.10710152335789]
+walmart,['WMT', 'Walmart', 119.98702914472939]
+waste management,,,
+waters,['WAT', 'Waters Corporation', 199.61347817683566]
+wec,,,
+wells fargo,['WFC', 'Wells Fargo', 34.11471010291058]
+welltower,,,
+west pharma,['WST', 'West Pharmaceutical Services', 180.41847815029863]
+western digital,['WDC', 'Western Digital', 50.052391301030696]
+western union,,,
+west rock,['WRK', 'WestRock', 31.859782688859582]
+weyerhauser,['WY', 'Weyerhaeuser', 23.28478263080984]
+whirlpool,['WHR', 'Whirlpool Corp.', 124.1458696006001]
+williams,,,
+willis towers,,,
+wynn ,,,
+xcel,['XEL', 'Xcel Energy Inc', 64.02101461438166]
+xerox,,,
+xilinix,['XLNX', 'Xilinx', 88.70949305658755]
+xylem,['XYL', 'Xylem Inc.', 71.87478272811227]
+yum,['YUM', 'Yum! Brands Inc', 89.22050744208737]
+zebra,['ZBRA', 'Zebra Technologies', 232.3652893287548]
+zimmer,['ZBH', 'Zimmer Biomet Holdings', 126.57652155558269]
+zions,['ZION', 'Zions Bancorp', 36.1004348008529]
+zoetis,['ZTS', 'Zoetis', 131.75130390775377]
